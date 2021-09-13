@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Disabled.Models.Category>
+
+<nav class="categories-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center">
+                <ul class="categories-menu d-flex list-unstyled flex-column flex-md-row">
+                    @foreach (var category in Model)
+                    {
+                        <li class="d-flex align-items-center align-items-xl-start justify-content-start">
+                            <a href="@Url.Action("ProductList", "Shop", new { categoryname = category.CategoryName.ToString() })"><span class="text-left text-md-center">@category.CategoryName</span></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

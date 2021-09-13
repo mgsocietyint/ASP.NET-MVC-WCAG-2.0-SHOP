@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Disabled. | " + ViewBag.Category;
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="shop-products background">
+    <div id="product-list">
+        @Html.Action("CategoriesMenu")
+        <div class="breadcrumb-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @Html.Partial("_ProductList")
+    </div>
+</div>

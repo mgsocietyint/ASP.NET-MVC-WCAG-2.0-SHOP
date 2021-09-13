@@ -1,0 +1,25 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup1": {
+      "Type": "resourceGroup",
+      "Value": "Disabled20200701212553ResourceGroup"
+    },
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "Disabled20200701160522ResourceGroup"
+    },
+    "resourceGroup2": {
+      "Type": "resourceGroup",
+      "Value": "Disabled20200701214542ResourceGroup"
+    },
+    "subscriptionId1": {
+      "Type": "subscription",
+      "Value": "a3a1b812-49e3-44bf-b663-0ea5501c7147"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "3f0ac6b7-aa7a-4279-af44-e0cbaf463ce7"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+﻿@model Disabled.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Disabled. | Rejestracja";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="container register-form d-flex align-items-center">
+        @using (Html.BeginForm("Register", "Account"))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col">
+                    <h1>Rejestracja</h1>
+                </div>
+            </div>
+            <div class="row register-error-row">
+                <div class="col" id="login-error">
+                    @Html.ValidationMessage("loginerror", "")
+                    @Html.ValidationSummary()
+                </div>
+            </div>
+            <div class="row first-name-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.FirstName, "Imię:")
+                </div>
+            </div>
+            <div class="row first-name-validation-row">
+                <div class="col">
+                    @Html.TextBoxFor(o => o.FirstName)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.FirstName)
+                    </div>
+                </div>
+            </div>
+            <div class="row last-name-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.LastName, "Nazwisko:")
+                </div>
+            </div>
+            <div class="row last-name-validation-row">
+                <div class="col">
+                    @Html.TextBoxFor(o => o.LastName)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.LastName)
+                    </div>
+                </div>
+            </div>
+            <div class="row email-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.Email, "E-mail:")
+                </div>
+            </div>
+            <div class="row email-validation-row">
+                <div class="col">
+                    @Html.TextBoxFor(o => o.Email)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.Email)
+                    </div>
+                </div>
+            </div>
+            <div class="row password-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.Password, "Hasło:")
+                </div>
+            </div>
+            <div class="row password-validation-row">
+                <div class="col">
+                    @Html.PasswordFor(o => o.Password)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.Password)
+                    </div>
+                </div>
+            </div>
+            <div class="row password-check-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.ConfirmPassword, "Potwierdź hasło:")
+                </div>
+            </div>
+            <div class="row password-check-validation-row">
+                <div class="col">
+                    @Html.PasswordFor(o => o.ConfirmPassword)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.ConfirmPassword)
+                    </div>
+                </div>
+            </div>
+            <div class="row register-row">
+                <div class="col">
+                    <input type="submit" value="Zarejestruj" class="submit-link" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+

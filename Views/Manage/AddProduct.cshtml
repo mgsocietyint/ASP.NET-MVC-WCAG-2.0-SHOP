@@ -1,0 +1,122 @@
+﻿@model Disabled.ViewModels.EditProductViewModel
+@{
+    ViewBag.Title = "Disabled. | Dodawanie i edycja produktu";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="product-manage-content manage-form background">
+    <div class="container">
+        @if (Model.ConfirmSuccess.HasValue && Model.ConfirmSuccess.Value)
+        {
+            <div class="row change-success-row">
+                <div class="col">
+                    <span>Pomyślnie wprowadzono zmiany!</span>
+                </div>
+            </div>
+        }
+
+        @using (Html.BeginForm("AddProduct", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row heading-row">
+                <div class="col">
+                    <h1>Dodawanie lub edycja produktu</h1>
+                </div>
+            </div>
+
+            <div class="row error-summary-row">
+                <div class="col">
+                    <div id="login-error" class="error-summary">
+                        @Html.ValidationSummary()
+                    </div>
+                </div>
+            </div>
+
+            @Html.HiddenFor(o => o.Product.ProductId)
+            @Html.HiddenFor(o => o.Product.ProductImageFileName)
+
+            <div class="row product-name-row">
+                <div class="col">
+                    <div>@Html.LabelFor(o => o.Product.ProductName, "Nazwa produktu:")</div>
+                    <div>@Html.TextBoxFor(o => o.Product.ProductName)</div>
+                    <div>@Html.ValidationMessageFor(o => o.Product.ProductName)</div>
+                </div>
+            </div>
+
+            <div class="row product-desc-row">
+                <div class="col">
+                    <div>@Html.LabelFor(o => o.Product.Description, "Opis:")</div>
+                    <div>@Html.TextBoxFor(o => o.Product.Description)</div>
+                    <div>@Html.ValidationMessageFor(o => o.Product.Description)</div>
+                </div>
+            </div>
+
+            <div class="row price-row">
+                <div class="col">
+                    <div>@Html.LabelFor(o => o.Product.Price, "Cena:")</div>
+                    <div>@Html.TextBoxFor(o => o.Product.Price)</div>
+                    <div>@Html.ValidationMessageFor(o => o.Product.Price)</div>
+                </div>
+            </div>
+
+            <div class="row category-choice-row">
+                <div class="col">
+                    <div>@Html.LabelFor(o => o.Categories, "Kategoria:")</div>
+                    <div> @Html.DropDownListFor(m => m.Product.CategoryId, new SelectList(Model.Categories, "CategoryId", "CategoryName", Model.Categories.First().CategoryId))</div>
+                </div>
+            </div>
+
+            if (ViewBag.EditMode == null || !ViewBag.EditMode)
+            {
+                <div class="row file-upload-row">
+                    <div class="col">
+                        <div class="file-upload-button">
+                            <input id="file" class="input-file" type="file" name="file" />
+                            <label class="d-flex align-items-center justify-content-center" for="file">Wybierz plik</label>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            if (ViewBag.EditMode)
+            {
+                if (Model.Product.IsHidden)
+                {
+                    <div class="row unhide-product-row">
+                        <div class="col">
+                            <a class="d-flex unhide-button align-items-center justify-content-center" href="@Url.Action("UnhideProduct", "Manage", new { productId = Model.Product.ProductId })">Przywróć</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row hide-product-row">
+                        <div class="col">
+                            <a class="d-flex delete-button align-items-center justify-content-center" href="@Url.Action("HideProduct", "Manage", new { productId = Model.Product.ProductId })">Usuń</a>
+                        </div>
+                    </div>
+                }
+            }
+            <div class="row save-row">
+                <div class="col">
+                    <input type="submit" value="Zapisz" class="submitLink mt-0" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

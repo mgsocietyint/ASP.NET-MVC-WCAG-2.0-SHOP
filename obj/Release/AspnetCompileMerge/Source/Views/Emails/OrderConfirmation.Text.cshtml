@@ -1,0 +1,20 @@
+﻿@model Disabled.ViewModels.OrderConfirmationEmail
+Content-Type: text/plain; charset=utf-8
+
+Dziękujemy za złożenie zamówienia!
+
+Postaramy się dostarczyć zamówione produkty jak najszybciej.
+
+Prosimy o przelanie kwoty @Model.Cost zł, tytułem "zamówienie #@Model.OrderNumber" na poniższe konto bankowe:
+
+Disabled. Sp. z o.o.
+ul. Kondratowicza 4B
+03-242 Warszawa
+PKO BP 15 1515 1523 1111 2222 3333
+
+Po otrzymaniu wpłaty wyślemy zamawiane produkty pod adres: @Model.FullAddress.
+
+W tym miejscu możesz zobaczyć szczegóły Twojego zamówienia: @Url.Action("OrdersList", "Manage", null, "https")
+
+Zapraszamy ponownie!
+Disabled.

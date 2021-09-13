@@ -1,0 +1,64 @@
+﻿@model Disabled.Models.Product
+@using Disabled.Infrastructure
+
+@{
+    ViewBag.Title = "Disabled. | " + Model.ProductName;
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+@Html.Action("CategoriesMenu")
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="shop-product-details background">
+    @Html.Partial("Search")
+    <div class="container product-details-content">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-5 col-xl-4 text-center text-lg-left p-0 left-col-content">
+                <div class="overlay-photo">
+                    <div class="color-overlay"></div>
+                    <img src="~/Content/img/Products/@Model.ProductImageFileName" alt="Zdjęcie produktu: @Model.ProductName" />
+                </div>
+            </div>
+            <div class="col-12 col-md-7 col-xl-8 text-left text-md-left p-0 right-col-content">
+                <div class="container-fluid d-flex d-md-block flex-column align-items-center">
+                    <div class="row product-name-row">
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <span class="text-center">@Model.ProductName</span>
+                        </div>
+                    </div>
+                    <div class="row product-desc-row">
+                        <div class="col-12">
+                            <span>@Model.Description</span>
+                        </div>
+                    </div>
+                    <div class="row price-cart-row">
+                        <div class="col-9 d-flex align-items-center justify-content-end price-col">
+                            <span>@String.Format("{0:N2}", Model.Price)</span>
+                            <span> zł</span>
+                        </div>
+                        <div class="col-3 d-flex align-items-center justify-content-center cart-col">
+                            <a href="@Url.Action("AddToCart", "Cart", new { id = Model.ProductId })">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row edit-product pt-4">
+            <div class="col d-flex justify-content-center justify-content-md-end">
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    <a class="d-flex edit-link align-items-center justify-content-center edit-button" href="@Url.Action("AddProduct", "Manage", new { productId = Model.ProductId })"> EDYTUJ</a>
+                }
+            </div>
+        </div>
+    </div>
+</section>

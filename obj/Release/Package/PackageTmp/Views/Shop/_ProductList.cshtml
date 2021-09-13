@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Disabled.Models.Product>
+
+@Html.Partial("Search")
+
+<section id="productlist-section">
+    <div class="container-fluid container-lg text-center">
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-12 col-md-4 d-flex flex-column align-items-center justify-content-center product-box">
+                    <a href="@Url.Action("ProductDetails", "Shop", new { id = product.ProductId })">
+                        <div class="overlay-photo">
+                            <div class="color-overlay"></div>
+                            <img src="@Url.ProductIconPath(product.ProductImageFileName)" alt="Zdjęcie produktu: @product.ProductName" />
+                        </div>
+                    </a>
+                    <p class="d-flex align-items-center justify-content-center">@product.ProductName</p>
+                    <div class="price-cart-link d-flex justify-content-between">
+                        <span class="text-right">@product.Price zł</span>
+                        <a href="@Url.Action("AddToCart", "Cart", new { id = product.ProductId })"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

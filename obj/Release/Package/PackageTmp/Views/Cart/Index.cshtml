@@ -1,0 +1,129 @@
+﻿@model Disabled.ViewModels.CartViewModel
+
+@{
+    ViewBag.Title = "Disabled. | Koszyk";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+@Html.Action("CategoriesMenu", "Shop")
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="background">
+    <div class="container d-flex flex-column align-items-center justify-content-start justify-content-md-center cart-content pt-5 pt-md-3 ">
+        <div class="row table-row no-gutters">
+            <div class="col">
+                <div @if (Model.CartItems.Count == 0) { <text> class="hidden" </text> }>
+                    <table class="table mb-0" id="table">
+                        <thead class="mb-2">
+                            <tr>
+                                <th class="text-center" scope="col">Zdjęcie</th>
+                                <th class="text-center" scope="col">Produkt</th>
+                                <th class="text-center" scope="col">Ilość</th>
+                                <th class="text-center" scope="col">Cena</th>
+                                <th class="text-center" scope="col">Opcje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cartItem in Model.CartItems)
+                            {
+                                <tr id="cart-row-@cartItem.Product.ProductId">
+                                    <th class="item-photo text-center" scope="row">
+                                        <a href="@Url.Action("ProductDetails", "Shop", new { id = cartItem.Product.ProductId })">
+                                            <div class="color-overlay"></div>
+                                            <img src="~/Content/img/Products/@cartItem.Product.ProductImageFileName" />
+                                        </a>
+                                    </th>
+                                    <td class="text-center"><a href="@Url.Action("ProductDetails", "Shop", new { id = cartItem.Product.ProductId })">@cartItem.Product.ProductName</a></td>
+                                    <td class="text-center" id="cart-item-count-@cartItem.Product.ProductId">@cartItem.Quantity</td>
+                                    <td class="text-center">@String.Format("{0:0.##}", cartItem.TotalPrice)zł</td>
+                                    <td class="text-center"><a href="#" class="removeProduct" data-id="@cartItem.Product.ProductId">Usuń</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row total-price-row no-gutters d-flex align-items-center justify-content-center justify-content-md-end mb-2">
+            <div class="col d-flex justify-content-center justify-content-md-end">
+                <div @if (Model.CartItems.Count == 0) { <text> class="hidden" </text> }>
+                    <div id="total-price" class=" d-flex align-items-center justify-content-center">
+                        <span>Razem: </span>
+                        <span id="total-price-value">@String.Format("{0:0.##}", Model.TotalPrice) zł</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters d-flex align-items-center justify-content-center justify-content-md-end">
+            <div @if (Model.CartItems.Count == 0) { <text> class="hidden" </text> }>
+                <div class="col d-flex p-0">
+                    <a href="@Url.Action("Index", "Shop")" class="continue-shopping-link d-flex align-items-center justify-content-center mr-1" id="continue-shopping">Kontynuuj zakupy</a>
+                    @if (Model.TotalPrice > 0)
+                    {
+                        <a class="buy-link d-flex align-items-center justify-content-center" id="cart-button-checkout" href="@Url.Action("Checkout", "Cart")">Kupuję!</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row empty-cart-row no-gutters">
+            <div class="col d-flex align-items-center justify-content-center">
+                <div id="empty-cart" @if (Model.CartItems != null && Model.CartItems.Count > 0) { <text> class="hidden" </text> }>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="text-center">Twój koszyk jest pusty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $(".removeProduct").click(function () {
+
+            var productToDelete = $(this).attr("data-id");
+
+            if (productToDelete != '') {
+
+                $.post("/Cart/RemoveFromCart", { "productID": productToDelete },
+                    function (response) {
+
+                        if (response.RemovedItemCount == 0) {
+
+                            $('#cart-row-' + response.RemoveItemId).fadeOut('slow', function () {
+                                if (response.CartItemsCount == 0) {
+                                    $("#empty-cart").removeClass("hidden");
+                                }
+                            });
+                        } else {
+                            $('#cart-item-count-' + response.RemoveItemId).text(response.RemovedItemCount);
+                        }
+
+                        if (response.CartItemsCount == 0) {
+                            $('#table').addClass('hidden');
+                            $('#continue-shopping').addClass('hidden');
+                            $('#cart-button-checkout').addClass('hidden');
+                            $('#total-price').addClass('invisible');
+                        }
+
+                        $('#total-price-value').text(response.CartTotal);
+                        $('#cart-header-items-count').text(response.CartItemsCount);
+
+                    });
+
+                return false;
+            }
+        });
+
+    });
+
+</script>

@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "Content/style.css",
+    "inputFile": "Content/style.scss"
+  },
+  {
+    "outputFile": "Content/global.css",
+    "inputFile": "Content/global.scss"
+  },
+  {
+    "outputFile": "Content/global-wb-contrast.css",
+    "inputFile": "Content/global-wb-contrast.scss"
+  },
+  {
+    "outputFile": "Content/global-bp-contrast.css",
+    "inputFile": "Content/global-bp-contrast.scss"
+  },
+  {
+    "outputFile": "Content/global-bw-contrast.css",
+    "inputFile": "Content/global-bw-contrast.scss"
+  },
+  {
+    "outputFile": "Content/global-by-contrast.css",
+    "inputFile": "Content/global-by-contrast.scss"
+  },
+  {
+    "outputFile": "Content/global-pb-contrast.css",
+    "inputFile": "Content/global-pb-contrast.scss"
+  },
+  {
+    "outputFile": "Content/global-yb-contrast.css",
+    "inputFile": "Content/global-yb-contrast.scss"
+  },
+  {
+    "outputFile": "Content/style-wb-contrast.css",
+    "inputFile": "Content/style-wb-contrast.scss"
+  }
+]

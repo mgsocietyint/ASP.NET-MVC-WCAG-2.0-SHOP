@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "Disabled20200701160522ResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "3f0ac6b7-aa7a-4279-af44-e0cbaf463ce7"
+    }
+  }
+}

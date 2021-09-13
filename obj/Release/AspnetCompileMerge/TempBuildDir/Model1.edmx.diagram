@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="97ff264a84824e6cbd7a71d5fa4925f3" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="DisabledDBModel.AspNetRoles" Width="1.625" PointX="4.125" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.AspNetUserClaims" Width="1.625" PointX="6.375" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.AspNetUserLogins" Width="1.625" PointX="4.125" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.AspNetUsers" Width="2" PointX="1.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.Categories" Width="1.875" PointX="8.625" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.OrderItems" Width="1.625" PointX="6.375" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.Orders" Width="1.625" PointX="4.125" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DisabledDBModel.Products" Width="1.875" PointX="8.625" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_Orders_dbo_AspNetUsers_ApplicationUser_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_Products_dbo_Categories_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_OrderItems_dbo_Orders_OrderId" ManuallyRouted="false" />
+        <AssociationConnector Association="DisabledDBModel.FK_dbo_OrderItems_dbo_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="DisabledDBModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

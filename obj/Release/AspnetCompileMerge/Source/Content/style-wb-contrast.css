@@ -1,0 +1,1731 @@
+﻿*::selection {
+  color: white;
+  background-color: black; }
+
+* {
+  text-shadow: none; }
+
+body {
+  font-size: 1rem; }
+  body .hidden {
+    display: none !important;
+    visibility: hidden; }
+  body .breadcrumb-background {
+    background-color: white;
+    border-bottom: 2px solid black; }
+  body .breadcrumbs {
+    background-color: white;
+    color: #1b1a1a; }
+    body .breadcrumbs a {
+      color: black;
+      font-weight: 600;
+      text-decoration: none; }
+  body .section-selection {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 1021;
+    margin: 0;
+    border: none; }
+    @media only screen and (max-width: 767px) {
+      body .section-selection li a {
+        font-weight: 600;
+        font-size: 0.625em;
+        padding: 5px 10px 5px 10px;
+        width: 130px;
+        color: black;
+        background-color: white;
+        border: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: none; } }
+    @media only screen and (min-width: 768px) {
+      body .section-selection li a {
+        font-weight: 600;
+        font-size: 0.625em;
+        padding: 5px 10px 5px 10px;
+        width: 150px;
+        color: black;
+        background-color: white;
+        border: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: none; } }
+    @media only screen and (min-width: 992px) {
+      body .section-selection li a {
+        font-weight: 600;
+        font-size: 1em;
+        padding: 5px 10px 5px 10px;
+        min-width: 270px;
+        color: black;
+        background-color: white;
+        border: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        text-shadow: none; } }
+    body .section-selection li a:focus {
+      opacity: 1; }
+
+.breadcrumbs {
+  background-color: white;
+  margin: 0 0 0 0;
+  padding: 0 0 0 10px; }
+  .breadcrumbs nav .breadcrumbs-prefix {
+    margin: 0;
+    padding: 0 9px 0 0;
+    color: black;
+    font-size: 0.9375rem; }
+  .breadcrumbs nav .breadcrumb {
+    padding: 10px 0 10px 0;
+    border-radius: 0;
+    background: none; }
+    .breadcrumbs nav .breadcrumb .breadcrumb-item {
+      color: #1f1f1f;
+      font-size: 0.9375rem; }
+      .breadcrumbs nav .breadcrumb .breadcrumb-item a {
+        color: black;
+        font-size: 0.9375rem; }
+
+*:focus, .navbar-toggler:focus, button:focus, .btn:focus {
+  outline-color: red;
+  outline-style: solid;
+  outline-width: medium;
+  transition: none !important; }
+
+.sticky-bar {
+  border-bottom: 2px solid black; }
+  .sticky-bar header {
+    background-image: none;
+    background-color: white;
+    border-bottom: 2px solid black; }
+    @media only screen and (min-width: 768px) {
+      .sticky-bar header {
+        height: 80px; } }
+    @media only screen and (min-width: 992px) {
+      .sticky-bar header {
+        height: 100px; } }
+    @media only screen and (min-width: 1200px) {
+      .sticky-bar header {
+        height: auto; } }
+    .sticky-bar header a {
+      color: black;
+      text-shadow: none; }
+    .sticky-bar header a:hover {
+      color: black; }
+    .sticky-bar header i {
+      font-size: 30px; }
+    .sticky-bar header .navbar-brand .logo-dot {
+      color: black; }
+    .sticky-bar header .top-bar {
+      width: 1140px;
+      padding: 0 0 0 5px; }
+      @media only screen and (max-width: 576px) {
+        .sticky-bar header .top-bar div {
+          padding-bottom: 10px;
+          padding-left: 0; } }
+      .sticky-bar header .top-bar .logo {
+        padding: 0; }
+    @media only screen and (max-width: 768px) {
+      .sticky-bar header .font-size-list {
+        display: none !important;
+        overflow: hidden !important; } }
+    .sticky-bar header .font-size-list li {
+      margin: auto;
+      padding-right: 3px; }
+      .sticky-bar header .font-size-list li .sm-font {
+        font-size: 0.9375em; }
+      .sticky-bar header .font-size-list li .md-font {
+        font-size: 1.125em; }
+      .sticky-bar header .font-size-list li .lg-font {
+        font-size: 1.3125em; }
+      .sticky-bar header .font-size-list li .xl-font {
+        font-size: 1.5em; }
+      .sticky-bar header .font-size-list li p {
+        font-weight: 500;
+        text-decoration: none;
+        margin: 0;
+        cursor: pointer; }
+    .sticky-bar header .contrast-list li {
+      border: 2px solid black;
+      border-radius: 50% 50%;
+      padding: 0 7px 1px 7px;
+      line-height: 23px;
+      font-size: 0.9375rem; }
+      .sticky-bar header .contrast-list li a {
+        font-weight: 700;
+        text-decoration: none;
+        line-height: 19px; }
+    .sticky-bar header .contrast-list li:hover {
+      cursor: pointer; }
+    .sticky-bar header .contrast-list .st-contrast {
+      background: url(/Content/img/Layout/marble-2371776_1920.jpg);
+      background-position: center;
+      background-size: cover;
+      color: black; }
+    .sticky-bar header .contrast-list .wb-contrast {
+      background-color: white;
+      color: black; }
+    .sticky-bar header .contrast-list .wb-contrast:hover {
+      opacity: 1; }
+    .sticky-bar header .contrast-list .bw-contrast {
+      background-color: black;
+      color: white; }
+    .sticky-bar header .contrast-list .bw-contrast:hover {
+      opacity: 1; }
+    .sticky-bar header .contrast-list .yb-contrast {
+      background-color: yellow;
+      color: black; }
+    .sticky-bar header .contrast-list .yb-contrast:hover {
+      opacity: 1; }
+    .sticky-bar header .contrast-list .by-contrast {
+      background-color: black;
+      color: yellow; }
+    .sticky-bar header .contrast-list .by-contrast:hover {
+      opacity: 1; }
+    .sticky-bar header .login-register .register-button {
+      color: black;
+      background-color: white;
+      margin: 0 2px 0 0;
+      border: 2px solid black;
+      border-radius: 6px; }
+      .sticky-bar header .login-register .register-button a {
+        width: 86px;
+        height: 31px;
+        text-decoration: none;
+        color: black;
+        padding-bottom: 1px;
+        text-shadow: none;
+        font-weight: 600; }
+      @media only screen and (min-width: 768px) {
+        .sticky-bar header .login-register .register-button {
+          height: 33px;
+          width: 80px;
+          font-size: 0.75rem; } }
+      @media only screen and (min-width: 960px) {
+        .sticky-bar header .login-register .register-button {
+          height: 35px;
+          width: 90px;
+          font-size: 0.875rem; } }
+    .sticky-bar header .login-register .login-button {
+      color: black;
+      background-color: white;
+      margin: 0 0 0 2px;
+      border: 2px solid black;
+      border-radius: 6px; }
+      .sticky-bar header .login-register .login-button a {
+        width: 86px;
+        height: 31px;
+        text-decoration: none;
+        color: black;
+        padding-bottom: 1px;
+        text-shadow: none;
+        font-weight: 600; }
+      @media only screen and (min-width: 768px) {
+        .sticky-bar header .login-register .login-button {
+          height: 33px;
+          width: 80px;
+          font-size: 0.75rem; } }
+      @media only screen and (min-width: 960px) {
+        .sticky-bar header .login-register .login-button {
+          height: 35px;
+          width: 90px;
+          font-size: 0.875rem; } }
+    .sticky-bar header .login-register .manage {
+      text-decoration: none;
+      font-weight: 500;
+      color: black; }
+    .sticky-bar header .login-register .logout-button {
+      border: none;
+      background: none; }
+      .sticky-bar header .login-register .logout-button a {
+        text-decoration: none;
+        font-weight: 700; }
+    .sticky-bar header .cart a {
+      text-decoration: none; }
+    .sticky-bar header .cart .cart-logo {
+      margin: 0 3px 0 0; }
+  .sticky-bar input {
+    border: 2px solid #343a40;
+    background-color: whitesmoke; }
+  .sticky-bar nav {
+    background-color: white;
+    font-family: 'Segoe UI'; }
+    .sticky-bar nav .navbar-toggler-icon i {
+      color: black;
+      font-size: 28px; }
+    .sticky-bar nav a {
+      text-shadow: none;
+      font-weight: 600; }
+    .sticky-bar nav .nav-item, .sticky-bar nav .nav-link, .sticky-bar nav .manageLink {
+      color: black; }
+    .sticky-bar nav .nav-item::after, .sticky-bar nav .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: black;
+      transition: width 1s; }
+    .sticky-bar nav .nav-item:hover::after, .sticky-bar nav .nav-link:hover::after {
+      width: 100%; }
+
+.sticky-bar:hover {
+  border-bottom: 2px solid black; }
+
+.breadcrumbs .breadcrumb {
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 10px; }
+  .breadcrumbs .breadcrumb li {
+    font-size: 1rem;
+    color: black; }
+    .breadcrumbs .breadcrumb li a {
+      font-size: 1rem;
+      color: black;
+      font-family: 'Segoe UI';
+      text-decoration: none; }
+
+.breadcrumb {
+  background-color: white; }
+
+.jumbotron {
+  background-image: none;
+  background-color: white;
+  border-bottom: 5px solid black;
+  min-height: 832px;
+  padding-bottom: 20px;
+  margin: 0;
+  position: relative;
+  background-image: url(/Content/img/Layout/sigmund-4MoIpDcSlr4-unsplash.jpg); }
+  .jumbotron .color-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .jumbotron .row {
+    z-index: 1; }
+  .jumbotron .jumbotron-items-list {
+    z-index: 1; }
+  .jumbotron h1 {
+    text-shadow: 0 1px 1px black; }
+    @media only screen and (min-width: 768px) {
+      .jumbotron h1 {
+        margin: 0 0 155px 40px;
+        font-size: 3.43em;
+        color: black; } }
+    @media only screen and (max-width: 767px) {
+      .jumbotron h1 {
+        margin: 0 0 155px 40px;
+        font-size: 1.875em;
+        color: black; } }
+    .jumbotron h1 span {
+      color: black;
+      font-size: 1.5em;
+      text-shadow: 0 1px 1px black; }
+      @media only screen and (max-width: 767px) {
+        .jumbotron h1 span {
+          font-size: 1.25em; } }
+  .jumbotron i {
+    color: black;
+    text-shadow: none; }
+  .jumbotron ul {
+    list-style: none;
+    width: 100%;
+    padding-bottom: 38px;
+    margin-right: 25px;
+    box-sizing: border-box; }
+    .jumbotron ul li {
+      margin: 0 0 15px 0; }
+      .jumbotron ul li i {
+        padding: 5px 5px 5px 10px;
+        font-size: 2.8125em;
+        background-color: white;
+        border-radius: 5px 0 0 5px;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black; }
+      .jumbotron ul li span {
+        min-height: 3.4375rem;
+        padding: 5px 8px 5px 20px;
+        font-size: 1.875em;
+        font-family: Consolas;
+        font-style: normal;
+        background-color: white;
+        color: black;
+        border-radius: 0 5px 5px 0;
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        text-shadow: none; }
+        @media only screen and (max-width: 576px) {
+          .jumbotron ul li span {
+            font-size: 0.875em; } }
+    .jumbotron ul li:hover i, .jumbotron ul li:hover span {
+      background-color: white; }
+    .jumbotron ul li:hover i {
+      color: black; }
+  .jumbotron button {
+    font-family: Consolas;
+    font-size: 1.1875em;
+    font-style: normal;
+    font-weight: 600;
+    min-width: 150px;
+    min-height: 80px;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    text-shadow: none;
+    transition: none; }
+    .jumbotron button a {
+      min-width: 144px;
+      min-height: 74px;
+      color: black;
+      text-decoration: none; }
+    .jumbotron button:focus {
+      border: 3px solid red; }
+  .jumbotron button:hover {
+    color: black;
+    background-color: white;
+    text-shadow: none; }
+
+.introduction {
+  height: auto;
+  background-image: none;
+  font-family: 'Century Gothic';
+  border-bottom: 3px solid black; }
+  @media only screen and (min-width: 992px) {
+    .introduction {
+      height: 650px; } }
+  .introduction .container-fluid {
+    height: inherit; }
+  .introduction .row {
+    height: auto; }
+  .introduction .group {
+    font-size: 1.875em;
+    font-weight: 600;
+    text-shadow: none; }
+    @media only screen and (max-width: 576px) {
+      .introduction .group {
+        font-size: 2.5em; } }
+  .introduction .group-desc {
+    color: black;
+    font-size: 0.9375em;
+    font-weight: 500;
+    text-shadow: none; }
+  .introduction span:hover {
+    text-shadow: none; }
+  .introduction .awesome-icons {
+    font-size: 7.5em;
+    line-height: 140px;
+    text-shadow: none;
+    color: black; }
+
+.audits {
+  padding-top: 70px;
+  font-family: Consolas;
+  border-bottom: 3px solid black;
+  background-color: white; }
+  .audits h2 {
+    margin-bottom: 70px;
+    padding-bottom: 15px;
+    font-weight: 900;
+    font-size: 2.8125em;
+    border-bottom: 4px solid black;
+    color: black;
+    text-shadow: none; }
+  .audits h2:hover {
+    border-color: black; }
+  .audits h2 {
+    font-weight: 600;
+    color: black;
+    text-shadow: none; }
+  .audits p {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: black;
+    text-shadow: none; }
+  .audits .audits-list {
+    padding-bottom: 10px; }
+    @media only screen and (min-width: 576px) {
+      .audits .audits-list .row {
+        min-width: 450px; } }
+    .audits .audits-list li {
+      margin-bottom: 15px;
+      padding-bottom: 20px; }
+      @media only screen and (max-width: 576px) {
+        .audits .audits-list li {
+          padding: 0;
+          margin-bottom: 48px; } }
+      .audits .audits-list li span {
+        font-size: 1.3125em;
+        font-weight: 600;
+        padding-right: 20px;
+        color: black;
+        text-shadow: none; }
+        @media only screen and (max-width: 576px) {
+          .audits .audits-list li span {
+            padding: 0 0 0 0;
+            margin-right: 0; } }
+      .audits .audits-list li span::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 1s; }
+      .audits .audits-list li span:hover::after {
+        width: 100%; }
+      .audits .audits-list li .circles {
+        width: 150px;
+        height: 150px;
+        border: 4px solid #171717;
+        border-radius: 50%;
+        background-image: none;
+        background-color: white;
+        transition: none;
+        opacity: 1; }
+        @media only screen and (max-width: 765px) {
+          .audits .audits-list li .circles {
+            margin-bottom: 30px; } }
+      .audits .audits-list li .circles:hover {
+        opacity: 1;
+        border: 4px solid black; }
+      .audits .audits-list li i {
+        font-size: 4.0625rem;
+        font-weight: 600;
+        text-shadow: none;
+        color: black; }
+
+.trainings {
+  padding-top: 70px;
+  font-family: Consolas;
+  background-color: white;
+  border-bottom: 3px solid black; }
+  .trainings h2 {
+    margin-bottom: 70px;
+    padding-bottom: 15px;
+    font-weight: 900;
+    font-size: 2.8125em;
+    border-bottom: 4px solid black;
+    color: black;
+    text-shadow: none; }
+  .trainings h2:hover {
+    border-color: black; }
+  .trainings h2 {
+    font-weight: 600;
+    color: black;
+    text-shadow: none; }
+  .trainings p {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: black;
+    text-shadow: none; }
+  .trainings .trainings-list {
+    padding-bottom: 10px; }
+    .trainings .trainings-list li {
+      margin-bottom: 15px;
+      padding-right: 20px;
+      padding-bottom: 20px; }
+      @media only screen and (max-width: 576px) {
+        .trainings .trainings-list li {
+          padding: 0; } }
+      .trainings .trainings-list li span {
+        font-size: 1.3125em;
+        font-weight: 600;
+        padding-left: 20px;
+        color: black;
+        text-shadow: none; }
+        @media only screen and (max-width: 576px) {
+          .trainings .trainings-list li span {
+            padding: 0 40px 0 0; } }
+      .trainings .trainings-list li span::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: black;
+        transition: width 1s; }
+      .trainings .trainings-list li span:hover::after {
+        width: 100%; }
+      .trainings .trainings-list li i {
+        font-size: 4.0625rem;
+        font-weight: 600;
+        color: black;
+        text-shadow: none; }
+      .trainings .trainings-list li .circles {
+        width: 150px;
+        height: 150px;
+        border: 4px solid #171717;
+        border-radius: 50%;
+        background-image: none;
+        background-color: white;
+        background-size: contain;
+        opacity: 1;
+        transition: none; }
+        @media only screen and (max-width: 576px) {
+          .trainings .trainings-list li .circles {
+            margin: 0 0 30px 95px; } }
+      .trainings .trainings-list li .circles:hover {
+        opacity: 1;
+        background-color: white;
+        border: 4px solid black;
+        text-shadow: none; }
+        .trainings .trainings-list li .circles:hover i {
+          text-shadow: none; }
+
+.footer {
+  background-color: white;
+  padding-top: 10px; }
+  .footer p {
+    font-family: Lato;
+    color: black;
+    text-shadow: none;
+    font-weight: 700; }
+  .footer ul li {
+    text-shadow: none; }
+    .footer ul li .company-address {
+      color: black;
+      text-shadow: none; }
+    .footer ul li a {
+      color: black;
+      text-decoration: none;
+      font-family: Lato;
+      text-shadow: none; }
+    .footer ul li i {
+      font-size: 30px;
+      color: black;
+      text-shadow: none; }
+
+.search-form {
+  margin: 20px 0 50px 0; }
+  .search-form input {
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 40px;
+    margin-right: 5px;
+    min-width: 400px;
+    color: black; }
+    @media only screen and (max-width: 765px) {
+      .search-form input {
+        min-width: 300px;
+        margin-bottom: 5px;
+        margin-right: 0; } }
+  .search-form input::placeholder {
+    color: black;
+    opacity: 1; }
+  .search-form input:-ms-input-placeholder {
+    color: black; }
+  .search-form input::-ms-input-placeholder {
+    color: black; }
+  .search-form .btn {
+    font-size: 1em;
+    font-weight: 600;
+    min-width: 80px;
+    height: 40px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    transition: none; }
+    @media only screen and (max-width: 765px) {
+      .search-form .btn {
+        min-width: 120px; } }
+
+.shop-content .category-box {
+  margin: 0 0 30px 0; }
+  .shop-content .category-box a {
+    text-decoration: none; }
+    .shop-content .category-box a img {
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      border-top: 2px solid black;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      height: 250px;
+      width: 250px; }
+    .shop-content .category-box a p {
+      font-weight: 600;
+      margin: 0;
+      background-color: white;
+      color: black;
+      width: 250px;
+      min-height: 50px;
+      border: 2px solid black;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      text-shadow: none; }
+    .shop-content .category-box a .overlay-photo {
+      position: relative; }
+      .shop-content .category-box a .overlay-photo .color-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+.categories-list {
+  background-color: white;
+  border-bottom: 2px solid #2b2f34;
+  border-top: none; }
+  .categories-list .categories-menu {
+    height: auto;
+    margin: 0; }
+    .categories-list .categories-menu li {
+      margin: 0; }
+      .categories-list .categories-menu li a {
+        display: flex;
+        padding: 0 10px 0 10px;
+        font-size: 0.9375em;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        align-content: start;
+        font-weight: 600; }
+    .categories-list .categories-menu li:hover {
+      background-color: white; }
+
+.background {
+  background-image: none;
+  background-color: white;
+  border-bottom: 2px solid black; }
+
+@media only screen and (min-width: 768px) {
+  #productlist-section {
+    min-height: 487px; } }
+
+#productlist-section .product-box {
+  margin: 0 0 30px 0; }
+  #productlist-section .product-box a {
+    z-index: 0;
+    height: 250px;
+    width: 250px;
+    text-decoration: none;
+    text-shadow: none; }
+    #productlist-section .product-box a img {
+      z-index: 1;
+      height: 250px;
+      width: 250px;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      border-top: 2px solid black;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px; }
+    #productlist-section .product-box a .overlay-photo {
+      position: relative; }
+      #productlist-section .product-box a .overlay-photo .color-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+  #productlist-section .product-box p {
+    margin: 0 0 0 0;
+    width: 250px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    font-weight: 600; }
+  #productlist-section .product-box .price-cart-link {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: white;
+    color: black;
+    width: 250px;
+    min-height: 28px;
+    padding: 0 0 0 0; }
+    #productlist-section .product-box .price-cart-link span {
+      min-width: 200px;
+      padding-right: 5px;
+      text-shadow: none;
+      font-weight: 600; }
+    #productlist-section .product-box .price-cart-link a {
+      padding: 1px 0 0 0;
+      width: 48px;
+      height: 26px;
+      background-color: white;
+      text-shadow: none; }
+      #productlist-section .product-box .price-cart-link a i {
+        color: black;
+        font-size: 20px;
+        text-shadow: none; }
+
+.shop-product-details .product-details-content {
+  padding-bottom: 50px; }
+  @media only screen and (min-width: 768px) {
+    .shop-product-details .product-details-content {
+      min-height: 529px; } }
+  @media only screen and (max-width: 767px) {
+    .shop-product-details .product-details-content {
+      min-height: 400px; } }
+  .shop-product-details .product-details-content .edit-product .col {
+    padding: 0; }
+    .shop-product-details .product-details-content .edit-product .col .edit-link {
+      text-decoration: none;
+      font-weight: 600;
+      height: 50px;
+      width: 184px;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      font-size: 1.2em; }
+  @media only screen and (max-width: 767px) {
+    .shop-product-details .product-details-content .left-col-content img {
+      height: 300px;
+      width: 300px;
+      border-left: 3px solid black;
+      border-top: 3px solid black;
+      border-right: 3px solid black; } }
+  @media only screen and (min-width: 768px) {
+    .shop-product-details .product-details-content .left-col-content img {
+      height: 306px;
+      width: 300px;
+      border: 3px solid black; } }
+  @media only screen and (min-width: 992px) {
+    .shop-product-details .product-details-content .left-col-content img {
+      height: 400px;
+      width: 400px;
+      border-left: 3px solid black;
+      border-top: 3px solid black;
+      border-bottom: 3px solid black;
+      border-right: 3px solid black; } }
+  @media only screen and (min-width: 1200px) {
+    .shop-product-details .product-details-content .left-col-content img {
+      height: 400px;
+      width: 380px;
+      border: 3px solid black; } }
+  .shop-product-details .product-details-content .left-col-content .overlay-photo {
+    position: relative; }
+    .shop-product-details .product-details-content .left-col-content .overlay-photo .color-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  @media only screen and (max-width: 767px) {
+    .shop-product-details .product-details-content .right-col-content .product-name-row {
+      background-color: white;
+      min-height: 80px;
+      width: 300px;
+      border-top: 3px solid black;
+      border-right: 3px solid black;
+      border-left: 3px solid black;
+      font-size: 1.3em;
+      font-family: Consolas;
+      font-weight: 600;
+      color: black; }
+    .shop-product-details .product-details-content .right-col-content .product-desc-row {
+      background-color: white;
+      min-height: 220px;
+      font-size: 1em;
+      font-weight: 600;
+      min-width: 300px;
+      border-top: 3px solid black;
+      border-right: 3px solid black;
+      border-left: 3px solid black; }
+    .shop-product-details .product-details-content .right-col-content .price-cart-row {
+      min-width: 300px;
+      min-height: 100px;
+      border: 3px solid black; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col {
+        background-color: white; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col span {
+          font-family: Consolas;
+          font-size: 1.5em;
+          font-weight: 600;
+          color: black;
+          text-shadow: none; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col {
+        background-color: white; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a {
+          text-decoration: none;
+          color: black;
+          text-shadow: none; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a i {
+            font-size: 50px;
+            text-shadow: none; } }
+  @media only screen and (min-width: 768px) {
+    .shop-product-details .product-details-content .right-col-content {
+      border: 0; }
+      .shop-product-details .product-details-content .right-col-content .product-name-row {
+        background-color: white;
+        min-height: 50px;
+        min-width: 400px;
+        border-top: 3px solid black;
+        font-size: 1em;
+        font-family: Consolas;
+        color: black;
+        border-right: 3px solid black;
+        font-weight: 600;
+        text-shadow: none; }
+      .shop-product-details .product-details-content .right-col-content .product-desc-row {
+        background-color: white;
+        min-height: 180px;
+        min-width: 400px;
+        font-size: 1.1em;
+        font-weight: 600;
+        border-top: 3px solid black;
+        border-right: 3px solid black; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row {
+        min-height: 50px;
+        min-width: 400px;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col {
+          background-color: white; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col span {
+            font-family: Consolas;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: black;
+            text-shadow: none; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col {
+          background-color: white;
+          min-height: 70px; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a {
+            text-decoration: none;
+            color: black;
+            text-shadow: none; }
+            .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a i {
+              font-size: 45px;
+              text-shadow: none; } }
+  @media only screen and (min-width: 992px) {
+    .shop-product-details .product-details-content .right-col-content .product-name-row {
+      background-color: white;
+      min-height: 80px;
+      min-width: 558px;
+      border-top: 3px solid black;
+      font-size: 1.2em;
+      font-family: Consolas;
+      color: black;
+      font-weight: 600; }
+    .shop-product-details .product-details-content .right-col-content .product-desc-row {
+      background-color: white;
+      min-height: 220px;
+      min-width: 558px;
+      font-size: 1em;
+      font-weight: 600; }
+    .shop-product-details .product-details-content .right-col-content .price-cart-row {
+      min-height: 100px;
+      min-width: 558px;
+      border-bottom: 3px solid black; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col {
+        background-color: white; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col span {
+          font-family: Consolas;
+          font-size: 1.5em;
+          font-weight: 600;
+          color: black;
+          text-shadow: none; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col {
+        background-color: white; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a {
+          text-decoration: none;
+          color: black;
+          text-shadow: none; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a i {
+            font-size: 65px;
+            text-shadow: none; } }
+  @media only screen and (min-width: 1200px) {
+    .shop-product-details .product-details-content .right-col-content {
+      border: 0; }
+      .shop-product-details .product-details-content .right-col-content .product-name-row {
+        background-color: white;
+        min-height: 80px;
+        min-width: 757px;
+        border-top: 3px solid black;
+        font-size: 1.55em;
+        font-family: Consolas;
+        color: black;
+        font-weight: 600; }
+      .shop-product-details .product-details-content .right-col-content .product-desc-row {
+        background-color: white;
+        min-height: 220px;
+        min-width: 757px;
+        font-size: 1em;
+        font-weight: 600; }
+      .shop-product-details .product-details-content .right-col-content .price-cart-row {
+        min-height: 100px;
+        min-width: 757px;
+        border-bottom: 3px solid black; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col {
+          background-color: white; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .price-col span {
+            font-family: Consolas;
+            font-size: 1.875em;
+            font-weight: 600;
+            color: black;
+            text-shadow: none; }
+        .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col {
+          background-color: white;
+          text-shadow: none; }
+          .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a {
+            text-decoration: none;
+            color: black;
+            text-shadow: none; }
+            .shop-product-details .product-details-content .right-col-content .price-cart-row .cart-col a i {
+              font-size: 70px;
+              text-shadow: none; } }
+
+.cart-content {
+  min-height: 668px; }
+  @media only screen and (max-width: 767px) {
+    .cart-content .row {
+      width: 300px; }
+      .cart-content .row .table {
+        font-size: 0.75rem;
+        font-weight: 600; } }
+  @media only screen and (min-width: 768px) {
+    .cart-content .row {
+      width: 700px; } }
+  @media only screen and (min-width: 992px) {
+    .cart-content .row {
+      width: 1000px; } }
+  @media only screen and (max-width: 576px) {
+    .cart-content {
+      min-height: 200px; } }
+  .cart-content a {
+    text-decoration: none;
+    color: black; }
+  .cart-content .table {
+    background-color: white; }
+    .cart-content .table .item-photo {
+      padding: 10px 0 10px 0;
+      position: relative; }
+      @media only screen and (max-width: 767px) {
+        .cart-content .table .item-photo {
+          padding-top: 17px; } }
+      .cart-content .table .item-photo .color-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .cart-content .table th {
+      padding: 0;
+      color: black;
+      border: 2px solid black; }
+    .cart-content .table td {
+      padding: 27px 0 27px 0;
+      color: black;
+      border: 2px solid black;
+      font-weight: 600; }
+    .cart-content .table a {
+      color: black;
+      font-weight: 600; }
+      .cart-content .table a img {
+        height: 60px;
+        width: 60px; }
+        @media only screen and (max-width: 576px) {
+          .cart-content .table a img {
+            height: 40px;
+            width: 40px; } }
+  .cart-content .continue-shopping-link {
+    width: 170px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: 600; }
+  .cart-content .buy-link {
+    width: 170px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: 600; }
+
+#total-price {
+  width: 150px;
+  height: 40px;
+  padding: 0;
+  background-color: white;
+  color: black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  font-weight: 600; }
+
+.empty-cart-row {
+  padding: 15px 0 15px 0; }
+  .empty-cart-row #empty-cart {
+    font-weight: 600;
+    font-family: Consolas;
+    text-transform: none;
+    border-top: 8px double black;
+    border-bottom: 8px double black;
+    color: black; }
+    @media only screen and (max-width: 576px) {
+      .empty-cart-row #empty-cart span {
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 577px) {
+      .empty-cart-row #empty-cart span {
+        font-size: 2em; } }
+    @media only screen and (min-width: 992px) {
+      .empty-cart-row #empty-cart span {
+        font-size: 3em; } }
+
+.register-form, .login-form, .checkout-form, .manage-form {
+  padding-bottom: 10px; }
+  @media only screen and (min-width: 992px) {
+    .register-form, .login-form, .checkout-form, .manage-form {
+      min-height: 668px; } }
+  .register-form #Email-error, .register-form #Password-error, .register-form #ConfirmPassword-error, .register-form #FirstName-error,
+  .register-form #LastName-error, .register-form #Address-error, .register-form #ZipCode-error, .register-form #City-error, .register-form #PhoneNumber-error,
+  .register-form #ChangePasswordViewModel_OldPassword-error, .register-form #ChangePasswordViewModel_NewPassword-error,
+  .register-form #ChangePasswordViewModel_ConfirmPassword-error, .register-form #Product_Price-error, .register-form #Product_ProductName-error,
+  .register-form #Product_Description-error, .login-form #Email-error, .login-form #Password-error, .login-form #ConfirmPassword-error, .login-form #FirstName-error,
+  .login-form #LastName-error, .login-form #Address-error, .login-form #ZipCode-error, .login-form #City-error, .login-form #PhoneNumber-error,
+  .login-form #ChangePasswordViewModel_OldPassword-error, .login-form #ChangePasswordViewModel_NewPassword-error,
+  .login-form #ChangePasswordViewModel_ConfirmPassword-error, .login-form #Product_Price-error, .login-form #Product_ProductName-error,
+  .login-form #Product_Description-error, .checkout-form #Email-error, .checkout-form #Password-error, .checkout-form #ConfirmPassword-error, .checkout-form #FirstName-error,
+  .checkout-form #LastName-error, .checkout-form #Address-error, .checkout-form #ZipCode-error, .checkout-form #City-error, .checkout-form #PhoneNumber-error,
+  .checkout-form #ChangePasswordViewModel_OldPassword-error, .checkout-form #ChangePasswordViewModel_NewPassword-error,
+  .checkout-form #ChangePasswordViewModel_ConfirmPassword-error, .checkout-form #Product_Price-error, .checkout-form #Product_ProductName-error,
+  .checkout-form #Product_Description-error, .manage-form #Email-error, .manage-form #Password-error, .manage-form #ConfirmPassword-error, .manage-form #FirstName-error,
+  .manage-form #LastName-error, .manage-form #Address-error, .manage-form #ZipCode-error, .manage-form #City-error, .manage-form #PhoneNumber-error,
+  .manage-form #ChangePasswordViewModel_OldPassword-error, .manage-form #ChangePasswordViewModel_NewPassword-error,
+  .manage-form #ChangePasswordViewModel_ConfirmPassword-error, .manage-form #Product_Price-error, .manage-form #Product_ProductName-error,
+  .manage-form #Product_Description-error {
+    color: #f83b3b;
+    font-weight: 600; }
+  .register-form .input-validation-error, .login-form .input-validation-error, .checkout-form .input-validation-error, .manage-form .input-validation-error {
+    border: 6px solid black; }
+  .register-form h1, .login-form h1, .checkout-form h1, .manage-form h1 {
+    width: max-content;
+    font-size: 2.5em;
+    color: black;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black; }
+  .register-form label, .login-form label, .checkout-form label, .manage-form label {
+    font-weight: 600;
+    color: black; }
+  .register-form .register-error-row, .login-form .register-error-row, .checkout-form .register-error-row, .manage-form .register-error-row {
+    padding-top: 5px; }
+    .register-form .register-error-row #login-error, .login-form .register-error-row #login-error, .checkout-form .register-error-row #login-error, .manage-form .register-error-row #login-error {
+      padding-bottom: 10px; }
+      .register-form .register-error-row #login-error ul, .login-form .register-error-row #login-error ul, .checkout-form .register-error-row #login-error ul, .manage-form .register-error-row #login-error ul {
+        padding: 0;
+        list-style: none;
+        text-decoration: none; }
+        .register-form .register-error-row #login-error ul li, .login-form .register-error-row #login-error ul li, .checkout-form .register-error-row #login-error ul li, .manage-form .register-error-row #login-error ul li {
+          border-left: 2px solid #f83b3b;
+          padding-left: 5px;
+          color: #f83b3b;
+          font-weight: 600; }
+  .register-form .login-error-row, .login-form .login-error-row, .checkout-form .login-error-row, .manage-form .login-error-row {
+    padding-top: 5px; }
+    .register-form .login-error-row #login-error ul, .login-form .login-error-row #login-error ul, .checkout-form .login-error-row #login-error ul, .manage-form .login-error-row #login-error ul {
+      padding: 0;
+      list-style: none;
+      text-decoration: none; }
+      .register-form .login-error-row #login-error ul li, .login-form .login-error-row #login-error ul li, .checkout-form .login-error-row #login-error ul li, .manage-form .login-error-row #login-error ul li {
+        border-left: 2px solid #f83b3b;
+        padding-left: 5px;
+        color: #f83b3b;
+        font-weight: 600; }
+  .register-form .error-summary-row, .login-form .error-summary-row, .checkout-form .error-summary-row, .manage-form .error-summary-row {
+    padding-top: 5px; }
+    .register-form .error-summary-row #login-error ul, .login-form .error-summary-row #login-error ul, .checkout-form .error-summary-row #login-error ul, .manage-form .error-summary-row #login-error ul {
+      padding: 0;
+      list-style: none;
+      text-decoration: none; }
+      .register-form .error-summary-row #login-error ul li, .login-form .error-summary-row #login-error ul li, .checkout-form .error-summary-row #login-error ul li, .manage-form .error-summary-row #login-error ul li {
+        border-left: 2px solid #f83b3b;
+        padding-left: 5px;
+        color: #f83b3b;
+        font-weight: 600; }
+  .register-form .change-password-container .change-password-heading, .login-form .change-password-container .change-password-heading, .checkout-form .change-password-container .change-password-heading, .manage-form .change-password-container .change-password-heading {
+    margin-bottom: 30px; }
+  .register-form .change-password-container .manage-message, .login-form .change-password-container .manage-message, .checkout-form .change-password-container .manage-message, .manage-form .change-password-container .manage-message {
+    color: red; }
+  .register-form .first-name-validation-row, .register-form .last-name-validation-row, .register-form .address-validation-row, .register-form .zip-code-validation-row,
+  .register-form .city-validation-row, .register-form .phone-validation-row, .register-form .email-validation-row, .register-form .password-validation-row,
+  .register-form .new-password-validation-row, .register-form .old-password-validation-row, .register-form .confirm-password-validation-row, .register-form .password-check-validation-row,
+  .register-form .remember-row, .register-form .login-row, .register-form .register-redirect-row, .register-form .register-row, .login-form .first-name-validation-row, .login-form .last-name-validation-row, .login-form .address-validation-row, .login-form .zip-code-validation-row,
+  .login-form .city-validation-row, .login-form .phone-validation-row, .login-form .email-validation-row, .login-form .password-validation-row,
+  .login-form .new-password-validation-row, .login-form .old-password-validation-row, .login-form .confirm-password-validation-row, .login-form .password-check-validation-row,
+  .login-form .remember-row, .login-form .login-row, .login-form .register-redirect-row, .login-form .register-row, .checkout-form .first-name-validation-row, .checkout-form .last-name-validation-row, .checkout-form .address-validation-row, .checkout-form .zip-code-validation-row,
+  .checkout-form .city-validation-row, .checkout-form .phone-validation-row, .checkout-form .email-validation-row, .checkout-form .password-validation-row,
+  .checkout-form .new-password-validation-row, .checkout-form .old-password-validation-row, .checkout-form .confirm-password-validation-row, .checkout-form .password-check-validation-row,
+  .checkout-form .remember-row, .checkout-form .login-row, .checkout-form .register-redirect-row, .checkout-form .register-row, .manage-form .first-name-validation-row, .manage-form .last-name-validation-row, .manage-form .address-validation-row, .manage-form .zip-code-validation-row,
+  .manage-form .city-validation-row, .manage-form .phone-validation-row, .manage-form .email-validation-row, .manage-form .password-validation-row,
+  .manage-form .new-password-validation-row, .manage-form .old-password-validation-row, .manage-form .confirm-password-validation-row, .manage-form .password-check-validation-row,
+  .manage-form .remember-row, .manage-form .login-row, .manage-form .register-redirect-row, .manage-form .register-row {
+    margin-bottom: 5px; }
+    .register-form .first-name-validation-row #FirstName, .register-form .first-name-validation-row #LastName, .register-form .first-name-validation-row #Address, .register-form .first-name-validation-row #ZipCode, .register-form .first-name-validation-row #City, .register-form .first-name-validation-row #PhoneNumber, .register-form .first-name-validation-row #Email, .register-form .first-name-validation-row #Password, .register-form .first-name-validation-row #ConfirmPassword, .register-form .first-name-validation-row #UserData_FirstName,
+    .register-form .first-name-validation-row #UserData_LastName, .register-form .first-name-validation-row #UserData_Address, .register-form .first-name-validation-row #UserData_ZipCode, .register-form .first-name-validation-row #UserData_City, .register-form .first-name-validation-row #UserData_PhoneNumber, .register-form .first-name-validation-row #UserData_Email,
+    .register-form .first-name-validation-row #ChangePasswordViewModel_OldPassword, .register-form .first-name-validation-row #ChangePasswordViewModel_NewPassword, .register-form .first-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .last-name-validation-row #FirstName, .register-form .last-name-validation-row #LastName, .register-form .last-name-validation-row #Address, .register-form .last-name-validation-row #ZipCode, .register-form .last-name-validation-row #City, .register-form .last-name-validation-row #PhoneNumber, .register-form .last-name-validation-row #Email, .register-form .last-name-validation-row #Password, .register-form .last-name-validation-row #ConfirmPassword, .register-form .last-name-validation-row #UserData_FirstName,
+    .register-form .last-name-validation-row #UserData_LastName, .register-form .last-name-validation-row #UserData_Address, .register-form .last-name-validation-row #UserData_ZipCode, .register-form .last-name-validation-row #UserData_City, .register-form .last-name-validation-row #UserData_PhoneNumber, .register-form .last-name-validation-row #UserData_Email,
+    .register-form .last-name-validation-row #ChangePasswordViewModel_OldPassword, .register-form .last-name-validation-row #ChangePasswordViewModel_NewPassword, .register-form .last-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .address-validation-row #FirstName, .register-form .address-validation-row #LastName, .register-form .address-validation-row #Address, .register-form .address-validation-row #ZipCode, .register-form .address-validation-row #City, .register-form .address-validation-row #PhoneNumber, .register-form .address-validation-row #Email, .register-form .address-validation-row #Password, .register-form .address-validation-row #ConfirmPassword, .register-form .address-validation-row #UserData_FirstName,
+    .register-form .address-validation-row #UserData_LastName, .register-form .address-validation-row #UserData_Address, .register-form .address-validation-row #UserData_ZipCode, .register-form .address-validation-row #UserData_City, .register-form .address-validation-row #UserData_PhoneNumber, .register-form .address-validation-row #UserData_Email,
+    .register-form .address-validation-row #ChangePasswordViewModel_OldPassword, .register-form .address-validation-row #ChangePasswordViewModel_NewPassword, .register-form .address-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .zip-code-validation-row #FirstName, .register-form .zip-code-validation-row #LastName, .register-form .zip-code-validation-row #Address, .register-form .zip-code-validation-row #ZipCode, .register-form .zip-code-validation-row #City, .register-form .zip-code-validation-row #PhoneNumber, .register-form .zip-code-validation-row #Email, .register-form .zip-code-validation-row #Password, .register-form .zip-code-validation-row #ConfirmPassword, .register-form .zip-code-validation-row #UserData_FirstName,
+    .register-form .zip-code-validation-row #UserData_LastName, .register-form .zip-code-validation-row #UserData_Address, .register-form .zip-code-validation-row #UserData_ZipCode, .register-form .zip-code-validation-row #UserData_City, .register-form .zip-code-validation-row #UserData_PhoneNumber, .register-form .zip-code-validation-row #UserData_Email,
+    .register-form .zip-code-validation-row #ChangePasswordViewModel_OldPassword, .register-form .zip-code-validation-row #ChangePasswordViewModel_NewPassword, .register-form .zip-code-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .register-form .city-validation-row #FirstName,
+    .register-form .city-validation-row #LastName,
+    .register-form .city-validation-row #Address,
+    .register-form .city-validation-row #ZipCode,
+    .register-form .city-validation-row #City,
+    .register-form .city-validation-row #PhoneNumber,
+    .register-form .city-validation-row #Email,
+    .register-form .city-validation-row #Password,
+    .register-form .city-validation-row #ConfirmPassword,
+    .register-form .city-validation-row #UserData_FirstName,
+    .register-form .city-validation-row #UserData_LastName,
+    .register-form .city-validation-row #UserData_Address,
+    .register-form .city-validation-row #UserData_ZipCode,
+    .register-form .city-validation-row #UserData_City,
+    .register-form .city-validation-row #UserData_PhoneNumber,
+    .register-form .city-validation-row #UserData_Email,
+    .register-form .city-validation-row #ChangePasswordViewModel_OldPassword,
+    .register-form .city-validation-row #ChangePasswordViewModel_NewPassword,
+    .register-form .city-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .phone-validation-row #FirstName, .register-form .phone-validation-row #LastName, .register-form .phone-validation-row #Address, .register-form .phone-validation-row #ZipCode, .register-form .phone-validation-row #City, .register-form .phone-validation-row #PhoneNumber, .register-form .phone-validation-row #Email, .register-form .phone-validation-row #Password, .register-form .phone-validation-row #ConfirmPassword, .register-form .phone-validation-row #UserData_FirstName,
+    .register-form .phone-validation-row #UserData_LastName, .register-form .phone-validation-row #UserData_Address, .register-form .phone-validation-row #UserData_ZipCode, .register-form .phone-validation-row #UserData_City, .register-form .phone-validation-row #UserData_PhoneNumber, .register-form .phone-validation-row #UserData_Email,
+    .register-form .phone-validation-row #ChangePasswordViewModel_OldPassword, .register-form .phone-validation-row #ChangePasswordViewModel_NewPassword, .register-form .phone-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .email-validation-row #FirstName, .register-form .email-validation-row #LastName, .register-form .email-validation-row #Address, .register-form .email-validation-row #ZipCode, .register-form .email-validation-row #City, .register-form .email-validation-row #PhoneNumber, .register-form .email-validation-row #Email, .register-form .email-validation-row #Password, .register-form .email-validation-row #ConfirmPassword, .register-form .email-validation-row #UserData_FirstName,
+    .register-form .email-validation-row #UserData_LastName, .register-form .email-validation-row #UserData_Address, .register-form .email-validation-row #UserData_ZipCode, .register-form .email-validation-row #UserData_City, .register-form .email-validation-row #UserData_PhoneNumber, .register-form .email-validation-row #UserData_Email,
+    .register-form .email-validation-row #ChangePasswordViewModel_OldPassword, .register-form .email-validation-row #ChangePasswordViewModel_NewPassword, .register-form .email-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .password-validation-row #FirstName, .register-form .password-validation-row #LastName, .register-form .password-validation-row #Address, .register-form .password-validation-row #ZipCode, .register-form .password-validation-row #City, .register-form .password-validation-row #PhoneNumber, .register-form .password-validation-row #Email, .register-form .password-validation-row #Password, .register-form .password-validation-row #ConfirmPassword, .register-form .password-validation-row #UserData_FirstName,
+    .register-form .password-validation-row #UserData_LastName, .register-form .password-validation-row #UserData_Address, .register-form .password-validation-row #UserData_ZipCode, .register-form .password-validation-row #UserData_City, .register-form .password-validation-row #UserData_PhoneNumber, .register-form .password-validation-row #UserData_Email,
+    .register-form .password-validation-row #ChangePasswordViewModel_OldPassword, .register-form .password-validation-row #ChangePasswordViewModel_NewPassword, .register-form .password-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .register-form .new-password-validation-row #FirstName,
+    .register-form .new-password-validation-row #LastName,
+    .register-form .new-password-validation-row #Address,
+    .register-form .new-password-validation-row #ZipCode,
+    .register-form .new-password-validation-row #City,
+    .register-form .new-password-validation-row #PhoneNumber,
+    .register-form .new-password-validation-row #Email,
+    .register-form .new-password-validation-row #Password,
+    .register-form .new-password-validation-row #ConfirmPassword,
+    .register-form .new-password-validation-row #UserData_FirstName,
+    .register-form .new-password-validation-row #UserData_LastName,
+    .register-form .new-password-validation-row #UserData_Address,
+    .register-form .new-password-validation-row #UserData_ZipCode,
+    .register-form .new-password-validation-row #UserData_City,
+    .register-form .new-password-validation-row #UserData_PhoneNumber,
+    .register-form .new-password-validation-row #UserData_Email,
+    .register-form .new-password-validation-row #ChangePasswordViewModel_OldPassword,
+    .register-form .new-password-validation-row #ChangePasswordViewModel_NewPassword,
+    .register-form .new-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .old-password-validation-row #FirstName, .register-form .old-password-validation-row #LastName, .register-form .old-password-validation-row #Address, .register-form .old-password-validation-row #ZipCode, .register-form .old-password-validation-row #City, .register-form .old-password-validation-row #PhoneNumber, .register-form .old-password-validation-row #Email, .register-form .old-password-validation-row #Password, .register-form .old-password-validation-row #ConfirmPassword, .register-form .old-password-validation-row #UserData_FirstName,
+    .register-form .old-password-validation-row #UserData_LastName, .register-form .old-password-validation-row #UserData_Address, .register-form .old-password-validation-row #UserData_ZipCode, .register-form .old-password-validation-row #UserData_City, .register-form .old-password-validation-row #UserData_PhoneNumber, .register-form .old-password-validation-row #UserData_Email,
+    .register-form .old-password-validation-row #ChangePasswordViewModel_OldPassword, .register-form .old-password-validation-row #ChangePasswordViewModel_NewPassword, .register-form .old-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .confirm-password-validation-row #FirstName, .register-form .confirm-password-validation-row #LastName, .register-form .confirm-password-validation-row #Address, .register-form .confirm-password-validation-row #ZipCode, .register-form .confirm-password-validation-row #City, .register-form .confirm-password-validation-row #PhoneNumber, .register-form .confirm-password-validation-row #Email, .register-form .confirm-password-validation-row #Password, .register-form .confirm-password-validation-row #ConfirmPassword, .register-form .confirm-password-validation-row #UserData_FirstName,
+    .register-form .confirm-password-validation-row #UserData_LastName, .register-form .confirm-password-validation-row #UserData_Address, .register-form .confirm-password-validation-row #UserData_ZipCode, .register-form .confirm-password-validation-row #UserData_City, .register-form .confirm-password-validation-row #UserData_PhoneNumber, .register-form .confirm-password-validation-row #UserData_Email,
+    .register-form .confirm-password-validation-row #ChangePasswordViewModel_OldPassword, .register-form .confirm-password-validation-row #ChangePasswordViewModel_NewPassword, .register-form .confirm-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .register-form .password-check-validation-row #FirstName, .register-form .password-check-validation-row #LastName, .register-form .password-check-validation-row #Address, .register-form .password-check-validation-row #ZipCode, .register-form .password-check-validation-row #City, .register-form .password-check-validation-row #PhoneNumber, .register-form .password-check-validation-row #Email, .register-form .password-check-validation-row #Password, .register-form .password-check-validation-row #ConfirmPassword, .register-form .password-check-validation-row #UserData_FirstName,
+    .register-form .password-check-validation-row #UserData_LastName, .register-form .password-check-validation-row #UserData_Address, .register-form .password-check-validation-row #UserData_ZipCode, .register-form .password-check-validation-row #UserData_City, .register-form .password-check-validation-row #UserData_PhoneNumber, .register-form .password-check-validation-row #UserData_Email,
+    .register-form .password-check-validation-row #ChangePasswordViewModel_OldPassword, .register-form .password-check-validation-row #ChangePasswordViewModel_NewPassword, .register-form .password-check-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .register-form .remember-row #FirstName,
+    .register-form .remember-row #LastName,
+    .register-form .remember-row #Address,
+    .register-form .remember-row #ZipCode,
+    .register-form .remember-row #City,
+    .register-form .remember-row #PhoneNumber,
+    .register-form .remember-row #Email,
+    .register-form .remember-row #Password,
+    .register-form .remember-row #ConfirmPassword,
+    .register-form .remember-row #UserData_FirstName,
+    .register-form .remember-row #UserData_LastName,
+    .register-form .remember-row #UserData_Address,
+    .register-form .remember-row #UserData_ZipCode,
+    .register-form .remember-row #UserData_City,
+    .register-form .remember-row #UserData_PhoneNumber,
+    .register-form .remember-row #UserData_Email,
+    .register-form .remember-row #ChangePasswordViewModel_OldPassword,
+    .register-form .remember-row #ChangePasswordViewModel_NewPassword,
+    .register-form .remember-row #ChangePasswordViewModel_ConfirmPassword, .register-form .login-row #FirstName, .register-form .login-row #LastName, .register-form .login-row #Address, .register-form .login-row #ZipCode, .register-form .login-row #City, .register-form .login-row #PhoneNumber, .register-form .login-row #Email, .register-form .login-row #Password, .register-form .login-row #ConfirmPassword, .register-form .login-row #UserData_FirstName,
+    .register-form .login-row #UserData_LastName, .register-form .login-row #UserData_Address, .register-form .login-row #UserData_ZipCode, .register-form .login-row #UserData_City, .register-form .login-row #UserData_PhoneNumber, .register-form .login-row #UserData_Email,
+    .register-form .login-row #ChangePasswordViewModel_OldPassword, .register-form .login-row #ChangePasswordViewModel_NewPassword, .register-form .login-row #ChangePasswordViewModel_ConfirmPassword, .register-form .register-redirect-row #FirstName, .register-form .register-redirect-row #LastName, .register-form .register-redirect-row #Address, .register-form .register-redirect-row #ZipCode, .register-form .register-redirect-row #City, .register-form .register-redirect-row #PhoneNumber, .register-form .register-redirect-row #Email, .register-form .register-redirect-row #Password, .register-form .register-redirect-row #ConfirmPassword, .register-form .register-redirect-row #UserData_FirstName,
+    .register-form .register-redirect-row #UserData_LastName, .register-form .register-redirect-row #UserData_Address, .register-form .register-redirect-row #UserData_ZipCode, .register-form .register-redirect-row #UserData_City, .register-form .register-redirect-row #UserData_PhoneNumber, .register-form .register-redirect-row #UserData_Email,
+    .register-form .register-redirect-row #ChangePasswordViewModel_OldPassword, .register-form .register-redirect-row #ChangePasswordViewModel_NewPassword, .register-form .register-redirect-row #ChangePasswordViewModel_ConfirmPassword, .register-form .register-row #FirstName, .register-form .register-row #LastName, .register-form .register-row #Address, .register-form .register-row #ZipCode, .register-form .register-row #City, .register-form .register-row #PhoneNumber, .register-form .register-row #Email, .register-form .register-row #Password, .register-form .register-row #ConfirmPassword, .register-form .register-row #UserData_FirstName,
+    .register-form .register-row #UserData_LastName, .register-form .register-row #UserData_Address, .register-form .register-row #UserData_ZipCode, .register-form .register-row #UserData_City, .register-form .register-row #UserData_PhoneNumber, .register-form .register-row #UserData_Email,
+    .register-form .register-row #ChangePasswordViewModel_OldPassword, .register-form .register-row #ChangePasswordViewModel_NewPassword, .register-form .register-row #ChangePasswordViewModel_ConfirmPassword, .login-form .first-name-validation-row #FirstName, .login-form .first-name-validation-row #LastName, .login-form .first-name-validation-row #Address, .login-form .first-name-validation-row #ZipCode, .login-form .first-name-validation-row #City, .login-form .first-name-validation-row #PhoneNumber, .login-form .first-name-validation-row #Email, .login-form .first-name-validation-row #Password, .login-form .first-name-validation-row #ConfirmPassword, .login-form .first-name-validation-row #UserData_FirstName,
+    .login-form .first-name-validation-row #UserData_LastName, .login-form .first-name-validation-row #UserData_Address, .login-form .first-name-validation-row #UserData_ZipCode, .login-form .first-name-validation-row #UserData_City, .login-form .first-name-validation-row #UserData_PhoneNumber, .login-form .first-name-validation-row #UserData_Email,
+    .login-form .first-name-validation-row #ChangePasswordViewModel_OldPassword, .login-form .first-name-validation-row #ChangePasswordViewModel_NewPassword, .login-form .first-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .last-name-validation-row #FirstName, .login-form .last-name-validation-row #LastName, .login-form .last-name-validation-row #Address, .login-form .last-name-validation-row #ZipCode, .login-form .last-name-validation-row #City, .login-form .last-name-validation-row #PhoneNumber, .login-form .last-name-validation-row #Email, .login-form .last-name-validation-row #Password, .login-form .last-name-validation-row #ConfirmPassword, .login-form .last-name-validation-row #UserData_FirstName,
+    .login-form .last-name-validation-row #UserData_LastName, .login-form .last-name-validation-row #UserData_Address, .login-form .last-name-validation-row #UserData_ZipCode, .login-form .last-name-validation-row #UserData_City, .login-form .last-name-validation-row #UserData_PhoneNumber, .login-form .last-name-validation-row #UserData_Email,
+    .login-form .last-name-validation-row #ChangePasswordViewModel_OldPassword, .login-form .last-name-validation-row #ChangePasswordViewModel_NewPassword, .login-form .last-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .address-validation-row #FirstName, .login-form .address-validation-row #LastName, .login-form .address-validation-row #Address, .login-form .address-validation-row #ZipCode, .login-form .address-validation-row #City, .login-form .address-validation-row #PhoneNumber, .login-form .address-validation-row #Email, .login-form .address-validation-row #Password, .login-form .address-validation-row #ConfirmPassword, .login-form .address-validation-row #UserData_FirstName,
+    .login-form .address-validation-row #UserData_LastName, .login-form .address-validation-row #UserData_Address, .login-form .address-validation-row #UserData_ZipCode, .login-form .address-validation-row #UserData_City, .login-form .address-validation-row #UserData_PhoneNumber, .login-form .address-validation-row #UserData_Email,
+    .login-form .address-validation-row #ChangePasswordViewModel_OldPassword, .login-form .address-validation-row #ChangePasswordViewModel_NewPassword, .login-form .address-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .zip-code-validation-row #FirstName, .login-form .zip-code-validation-row #LastName, .login-form .zip-code-validation-row #Address, .login-form .zip-code-validation-row #ZipCode, .login-form .zip-code-validation-row #City, .login-form .zip-code-validation-row #PhoneNumber, .login-form .zip-code-validation-row #Email, .login-form .zip-code-validation-row #Password, .login-form .zip-code-validation-row #ConfirmPassword, .login-form .zip-code-validation-row #UserData_FirstName,
+    .login-form .zip-code-validation-row #UserData_LastName, .login-form .zip-code-validation-row #UserData_Address, .login-form .zip-code-validation-row #UserData_ZipCode, .login-form .zip-code-validation-row #UserData_City, .login-form .zip-code-validation-row #UserData_PhoneNumber, .login-form .zip-code-validation-row #UserData_Email,
+    .login-form .zip-code-validation-row #ChangePasswordViewModel_OldPassword, .login-form .zip-code-validation-row #ChangePasswordViewModel_NewPassword, .login-form .zip-code-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .login-form .city-validation-row #FirstName,
+    .login-form .city-validation-row #LastName,
+    .login-form .city-validation-row #Address,
+    .login-form .city-validation-row #ZipCode,
+    .login-form .city-validation-row #City,
+    .login-form .city-validation-row #PhoneNumber,
+    .login-form .city-validation-row #Email,
+    .login-form .city-validation-row #Password,
+    .login-form .city-validation-row #ConfirmPassword,
+    .login-form .city-validation-row #UserData_FirstName,
+    .login-form .city-validation-row #UserData_LastName,
+    .login-form .city-validation-row #UserData_Address,
+    .login-form .city-validation-row #UserData_ZipCode,
+    .login-form .city-validation-row #UserData_City,
+    .login-form .city-validation-row #UserData_PhoneNumber,
+    .login-form .city-validation-row #UserData_Email,
+    .login-form .city-validation-row #ChangePasswordViewModel_OldPassword,
+    .login-form .city-validation-row #ChangePasswordViewModel_NewPassword,
+    .login-form .city-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .phone-validation-row #FirstName, .login-form .phone-validation-row #LastName, .login-form .phone-validation-row #Address, .login-form .phone-validation-row #ZipCode, .login-form .phone-validation-row #City, .login-form .phone-validation-row #PhoneNumber, .login-form .phone-validation-row #Email, .login-form .phone-validation-row #Password, .login-form .phone-validation-row #ConfirmPassword, .login-form .phone-validation-row #UserData_FirstName,
+    .login-form .phone-validation-row #UserData_LastName, .login-form .phone-validation-row #UserData_Address, .login-form .phone-validation-row #UserData_ZipCode, .login-form .phone-validation-row #UserData_City, .login-form .phone-validation-row #UserData_PhoneNumber, .login-form .phone-validation-row #UserData_Email,
+    .login-form .phone-validation-row #ChangePasswordViewModel_OldPassword, .login-form .phone-validation-row #ChangePasswordViewModel_NewPassword, .login-form .phone-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .email-validation-row #FirstName, .login-form .email-validation-row #LastName, .login-form .email-validation-row #Address, .login-form .email-validation-row #ZipCode, .login-form .email-validation-row #City, .login-form .email-validation-row #PhoneNumber, .login-form .email-validation-row #Email, .login-form .email-validation-row #Password, .login-form .email-validation-row #ConfirmPassword, .login-form .email-validation-row #UserData_FirstName,
+    .login-form .email-validation-row #UserData_LastName, .login-form .email-validation-row #UserData_Address, .login-form .email-validation-row #UserData_ZipCode, .login-form .email-validation-row #UserData_City, .login-form .email-validation-row #UserData_PhoneNumber, .login-form .email-validation-row #UserData_Email,
+    .login-form .email-validation-row #ChangePasswordViewModel_OldPassword, .login-form .email-validation-row #ChangePasswordViewModel_NewPassword, .login-form .email-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .password-validation-row #FirstName, .login-form .password-validation-row #LastName, .login-form .password-validation-row #Address, .login-form .password-validation-row #ZipCode, .login-form .password-validation-row #City, .login-form .password-validation-row #PhoneNumber, .login-form .password-validation-row #Email, .login-form .password-validation-row #Password, .login-form .password-validation-row #ConfirmPassword, .login-form .password-validation-row #UserData_FirstName,
+    .login-form .password-validation-row #UserData_LastName, .login-form .password-validation-row #UserData_Address, .login-form .password-validation-row #UserData_ZipCode, .login-form .password-validation-row #UserData_City, .login-form .password-validation-row #UserData_PhoneNumber, .login-form .password-validation-row #UserData_Email,
+    .login-form .password-validation-row #ChangePasswordViewModel_OldPassword, .login-form .password-validation-row #ChangePasswordViewModel_NewPassword, .login-form .password-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .login-form .new-password-validation-row #FirstName,
+    .login-form .new-password-validation-row #LastName,
+    .login-form .new-password-validation-row #Address,
+    .login-form .new-password-validation-row #ZipCode,
+    .login-form .new-password-validation-row #City,
+    .login-form .new-password-validation-row #PhoneNumber,
+    .login-form .new-password-validation-row #Email,
+    .login-form .new-password-validation-row #Password,
+    .login-form .new-password-validation-row #ConfirmPassword,
+    .login-form .new-password-validation-row #UserData_FirstName,
+    .login-form .new-password-validation-row #UserData_LastName,
+    .login-form .new-password-validation-row #UserData_Address,
+    .login-form .new-password-validation-row #UserData_ZipCode,
+    .login-form .new-password-validation-row #UserData_City,
+    .login-form .new-password-validation-row #UserData_PhoneNumber,
+    .login-form .new-password-validation-row #UserData_Email,
+    .login-form .new-password-validation-row #ChangePasswordViewModel_OldPassword,
+    .login-form .new-password-validation-row #ChangePasswordViewModel_NewPassword,
+    .login-form .new-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .old-password-validation-row #FirstName, .login-form .old-password-validation-row #LastName, .login-form .old-password-validation-row #Address, .login-form .old-password-validation-row #ZipCode, .login-form .old-password-validation-row #City, .login-form .old-password-validation-row #PhoneNumber, .login-form .old-password-validation-row #Email, .login-form .old-password-validation-row #Password, .login-form .old-password-validation-row #ConfirmPassword, .login-form .old-password-validation-row #UserData_FirstName,
+    .login-form .old-password-validation-row #UserData_LastName, .login-form .old-password-validation-row #UserData_Address, .login-form .old-password-validation-row #UserData_ZipCode, .login-form .old-password-validation-row #UserData_City, .login-form .old-password-validation-row #UserData_PhoneNumber, .login-form .old-password-validation-row #UserData_Email,
+    .login-form .old-password-validation-row #ChangePasswordViewModel_OldPassword, .login-form .old-password-validation-row #ChangePasswordViewModel_NewPassword, .login-form .old-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .confirm-password-validation-row #FirstName, .login-form .confirm-password-validation-row #LastName, .login-form .confirm-password-validation-row #Address, .login-form .confirm-password-validation-row #ZipCode, .login-form .confirm-password-validation-row #City, .login-form .confirm-password-validation-row #PhoneNumber, .login-form .confirm-password-validation-row #Email, .login-form .confirm-password-validation-row #Password, .login-form .confirm-password-validation-row #ConfirmPassword, .login-form .confirm-password-validation-row #UserData_FirstName,
+    .login-form .confirm-password-validation-row #UserData_LastName, .login-form .confirm-password-validation-row #UserData_Address, .login-form .confirm-password-validation-row #UserData_ZipCode, .login-form .confirm-password-validation-row #UserData_City, .login-form .confirm-password-validation-row #UserData_PhoneNumber, .login-form .confirm-password-validation-row #UserData_Email,
+    .login-form .confirm-password-validation-row #ChangePasswordViewModel_OldPassword, .login-form .confirm-password-validation-row #ChangePasswordViewModel_NewPassword, .login-form .confirm-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .login-form .password-check-validation-row #FirstName, .login-form .password-check-validation-row #LastName, .login-form .password-check-validation-row #Address, .login-form .password-check-validation-row #ZipCode, .login-form .password-check-validation-row #City, .login-form .password-check-validation-row #PhoneNumber, .login-form .password-check-validation-row #Email, .login-form .password-check-validation-row #Password, .login-form .password-check-validation-row #ConfirmPassword, .login-form .password-check-validation-row #UserData_FirstName,
+    .login-form .password-check-validation-row #UserData_LastName, .login-form .password-check-validation-row #UserData_Address, .login-form .password-check-validation-row #UserData_ZipCode, .login-form .password-check-validation-row #UserData_City, .login-form .password-check-validation-row #UserData_PhoneNumber, .login-form .password-check-validation-row #UserData_Email,
+    .login-form .password-check-validation-row #ChangePasswordViewModel_OldPassword, .login-form .password-check-validation-row #ChangePasswordViewModel_NewPassword, .login-form .password-check-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .login-form .remember-row #FirstName,
+    .login-form .remember-row #LastName,
+    .login-form .remember-row #Address,
+    .login-form .remember-row #ZipCode,
+    .login-form .remember-row #City,
+    .login-form .remember-row #PhoneNumber,
+    .login-form .remember-row #Email,
+    .login-form .remember-row #Password,
+    .login-form .remember-row #ConfirmPassword,
+    .login-form .remember-row #UserData_FirstName,
+    .login-form .remember-row #UserData_LastName,
+    .login-form .remember-row #UserData_Address,
+    .login-form .remember-row #UserData_ZipCode,
+    .login-form .remember-row #UserData_City,
+    .login-form .remember-row #UserData_PhoneNumber,
+    .login-form .remember-row #UserData_Email,
+    .login-form .remember-row #ChangePasswordViewModel_OldPassword,
+    .login-form .remember-row #ChangePasswordViewModel_NewPassword,
+    .login-form .remember-row #ChangePasswordViewModel_ConfirmPassword, .login-form .login-row #FirstName, .login-form .login-row #LastName, .login-form .login-row #Address, .login-form .login-row #ZipCode, .login-form .login-row #City, .login-form .login-row #PhoneNumber, .login-form .login-row #Email, .login-form .login-row #Password, .login-form .login-row #ConfirmPassword, .login-form .login-row #UserData_FirstName,
+    .login-form .login-row #UserData_LastName, .login-form .login-row #UserData_Address, .login-form .login-row #UserData_ZipCode, .login-form .login-row #UserData_City, .login-form .login-row #UserData_PhoneNumber, .login-form .login-row #UserData_Email,
+    .login-form .login-row #ChangePasswordViewModel_OldPassword, .login-form .login-row #ChangePasswordViewModel_NewPassword, .login-form .login-row #ChangePasswordViewModel_ConfirmPassword, .login-form .register-redirect-row #FirstName, .login-form .register-redirect-row #LastName, .login-form .register-redirect-row #Address, .login-form .register-redirect-row #ZipCode, .login-form .register-redirect-row #City, .login-form .register-redirect-row #PhoneNumber, .login-form .register-redirect-row #Email, .login-form .register-redirect-row #Password, .login-form .register-redirect-row #ConfirmPassword, .login-form .register-redirect-row #UserData_FirstName,
+    .login-form .register-redirect-row #UserData_LastName, .login-form .register-redirect-row #UserData_Address, .login-form .register-redirect-row #UserData_ZipCode, .login-form .register-redirect-row #UserData_City, .login-form .register-redirect-row #UserData_PhoneNumber, .login-form .register-redirect-row #UserData_Email,
+    .login-form .register-redirect-row #ChangePasswordViewModel_OldPassword, .login-form .register-redirect-row #ChangePasswordViewModel_NewPassword, .login-form .register-redirect-row #ChangePasswordViewModel_ConfirmPassword, .login-form .register-row #FirstName, .login-form .register-row #LastName, .login-form .register-row #Address, .login-form .register-row #ZipCode, .login-form .register-row #City, .login-form .register-row #PhoneNumber, .login-form .register-row #Email, .login-form .register-row #Password, .login-form .register-row #ConfirmPassword, .login-form .register-row #UserData_FirstName,
+    .login-form .register-row #UserData_LastName, .login-form .register-row #UserData_Address, .login-form .register-row #UserData_ZipCode, .login-form .register-row #UserData_City, .login-form .register-row #UserData_PhoneNumber, .login-form .register-row #UserData_Email,
+    .login-form .register-row #ChangePasswordViewModel_OldPassword, .login-form .register-row #ChangePasswordViewModel_NewPassword, .login-form .register-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .first-name-validation-row #FirstName, .checkout-form .first-name-validation-row #LastName, .checkout-form .first-name-validation-row #Address, .checkout-form .first-name-validation-row #ZipCode, .checkout-form .first-name-validation-row #City, .checkout-form .first-name-validation-row #PhoneNumber, .checkout-form .first-name-validation-row #Email, .checkout-form .first-name-validation-row #Password, .checkout-form .first-name-validation-row #ConfirmPassword, .checkout-form .first-name-validation-row #UserData_FirstName,
+    .checkout-form .first-name-validation-row #UserData_LastName, .checkout-form .first-name-validation-row #UserData_Address, .checkout-form .first-name-validation-row #UserData_ZipCode, .checkout-form .first-name-validation-row #UserData_City, .checkout-form .first-name-validation-row #UserData_PhoneNumber, .checkout-form .first-name-validation-row #UserData_Email,
+    .checkout-form .first-name-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .first-name-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .first-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .last-name-validation-row #FirstName, .checkout-form .last-name-validation-row #LastName, .checkout-form .last-name-validation-row #Address, .checkout-form .last-name-validation-row #ZipCode, .checkout-form .last-name-validation-row #City, .checkout-form .last-name-validation-row #PhoneNumber, .checkout-form .last-name-validation-row #Email, .checkout-form .last-name-validation-row #Password, .checkout-form .last-name-validation-row #ConfirmPassword, .checkout-form .last-name-validation-row #UserData_FirstName,
+    .checkout-form .last-name-validation-row #UserData_LastName, .checkout-form .last-name-validation-row #UserData_Address, .checkout-form .last-name-validation-row #UserData_ZipCode, .checkout-form .last-name-validation-row #UserData_City, .checkout-form .last-name-validation-row #UserData_PhoneNumber, .checkout-form .last-name-validation-row #UserData_Email,
+    .checkout-form .last-name-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .last-name-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .last-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .address-validation-row #FirstName, .checkout-form .address-validation-row #LastName, .checkout-form .address-validation-row #Address, .checkout-form .address-validation-row #ZipCode, .checkout-form .address-validation-row #City, .checkout-form .address-validation-row #PhoneNumber, .checkout-form .address-validation-row #Email, .checkout-form .address-validation-row #Password, .checkout-form .address-validation-row #ConfirmPassword, .checkout-form .address-validation-row #UserData_FirstName,
+    .checkout-form .address-validation-row #UserData_LastName, .checkout-form .address-validation-row #UserData_Address, .checkout-form .address-validation-row #UserData_ZipCode, .checkout-form .address-validation-row #UserData_City, .checkout-form .address-validation-row #UserData_PhoneNumber, .checkout-form .address-validation-row #UserData_Email,
+    .checkout-form .address-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .address-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .address-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .zip-code-validation-row #FirstName, .checkout-form .zip-code-validation-row #LastName, .checkout-form .zip-code-validation-row #Address, .checkout-form .zip-code-validation-row #ZipCode, .checkout-form .zip-code-validation-row #City, .checkout-form .zip-code-validation-row #PhoneNumber, .checkout-form .zip-code-validation-row #Email, .checkout-form .zip-code-validation-row #Password, .checkout-form .zip-code-validation-row #ConfirmPassword, .checkout-form .zip-code-validation-row #UserData_FirstName,
+    .checkout-form .zip-code-validation-row #UserData_LastName, .checkout-form .zip-code-validation-row #UserData_Address, .checkout-form .zip-code-validation-row #UserData_ZipCode, .checkout-form .zip-code-validation-row #UserData_City, .checkout-form .zip-code-validation-row #UserData_PhoneNumber, .checkout-form .zip-code-validation-row #UserData_Email,
+    .checkout-form .zip-code-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .zip-code-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .zip-code-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .checkout-form .city-validation-row #FirstName,
+    .checkout-form .city-validation-row #LastName,
+    .checkout-form .city-validation-row #Address,
+    .checkout-form .city-validation-row #ZipCode,
+    .checkout-form .city-validation-row #City,
+    .checkout-form .city-validation-row #PhoneNumber,
+    .checkout-form .city-validation-row #Email,
+    .checkout-form .city-validation-row #Password,
+    .checkout-form .city-validation-row #ConfirmPassword,
+    .checkout-form .city-validation-row #UserData_FirstName,
+    .checkout-form .city-validation-row #UserData_LastName,
+    .checkout-form .city-validation-row #UserData_Address,
+    .checkout-form .city-validation-row #UserData_ZipCode,
+    .checkout-form .city-validation-row #UserData_City,
+    .checkout-form .city-validation-row #UserData_PhoneNumber,
+    .checkout-form .city-validation-row #UserData_Email,
+    .checkout-form .city-validation-row #ChangePasswordViewModel_OldPassword,
+    .checkout-form .city-validation-row #ChangePasswordViewModel_NewPassword,
+    .checkout-form .city-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .phone-validation-row #FirstName, .checkout-form .phone-validation-row #LastName, .checkout-form .phone-validation-row #Address, .checkout-form .phone-validation-row #ZipCode, .checkout-form .phone-validation-row #City, .checkout-form .phone-validation-row #PhoneNumber, .checkout-form .phone-validation-row #Email, .checkout-form .phone-validation-row #Password, .checkout-form .phone-validation-row #ConfirmPassword, .checkout-form .phone-validation-row #UserData_FirstName,
+    .checkout-form .phone-validation-row #UserData_LastName, .checkout-form .phone-validation-row #UserData_Address, .checkout-form .phone-validation-row #UserData_ZipCode, .checkout-form .phone-validation-row #UserData_City, .checkout-form .phone-validation-row #UserData_PhoneNumber, .checkout-form .phone-validation-row #UserData_Email,
+    .checkout-form .phone-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .phone-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .phone-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .email-validation-row #FirstName, .checkout-form .email-validation-row #LastName, .checkout-form .email-validation-row #Address, .checkout-form .email-validation-row #ZipCode, .checkout-form .email-validation-row #City, .checkout-form .email-validation-row #PhoneNumber, .checkout-form .email-validation-row #Email, .checkout-form .email-validation-row #Password, .checkout-form .email-validation-row #ConfirmPassword, .checkout-form .email-validation-row #UserData_FirstName,
+    .checkout-form .email-validation-row #UserData_LastName, .checkout-form .email-validation-row #UserData_Address, .checkout-form .email-validation-row #UserData_ZipCode, .checkout-form .email-validation-row #UserData_City, .checkout-form .email-validation-row #UserData_PhoneNumber, .checkout-form .email-validation-row #UserData_Email,
+    .checkout-form .email-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .email-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .email-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .password-validation-row #FirstName, .checkout-form .password-validation-row #LastName, .checkout-form .password-validation-row #Address, .checkout-form .password-validation-row #ZipCode, .checkout-form .password-validation-row #City, .checkout-form .password-validation-row #PhoneNumber, .checkout-form .password-validation-row #Email, .checkout-form .password-validation-row #Password, .checkout-form .password-validation-row #ConfirmPassword, .checkout-form .password-validation-row #UserData_FirstName,
+    .checkout-form .password-validation-row #UserData_LastName, .checkout-form .password-validation-row #UserData_Address, .checkout-form .password-validation-row #UserData_ZipCode, .checkout-form .password-validation-row #UserData_City, .checkout-form .password-validation-row #UserData_PhoneNumber, .checkout-form .password-validation-row #UserData_Email,
+    .checkout-form .password-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .password-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .password-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .checkout-form .new-password-validation-row #FirstName,
+    .checkout-form .new-password-validation-row #LastName,
+    .checkout-form .new-password-validation-row #Address,
+    .checkout-form .new-password-validation-row #ZipCode,
+    .checkout-form .new-password-validation-row #City,
+    .checkout-form .new-password-validation-row #PhoneNumber,
+    .checkout-form .new-password-validation-row #Email,
+    .checkout-form .new-password-validation-row #Password,
+    .checkout-form .new-password-validation-row #ConfirmPassword,
+    .checkout-form .new-password-validation-row #UserData_FirstName,
+    .checkout-form .new-password-validation-row #UserData_LastName,
+    .checkout-form .new-password-validation-row #UserData_Address,
+    .checkout-form .new-password-validation-row #UserData_ZipCode,
+    .checkout-form .new-password-validation-row #UserData_City,
+    .checkout-form .new-password-validation-row #UserData_PhoneNumber,
+    .checkout-form .new-password-validation-row #UserData_Email,
+    .checkout-form .new-password-validation-row #ChangePasswordViewModel_OldPassword,
+    .checkout-form .new-password-validation-row #ChangePasswordViewModel_NewPassword,
+    .checkout-form .new-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .old-password-validation-row #FirstName, .checkout-form .old-password-validation-row #LastName, .checkout-form .old-password-validation-row #Address, .checkout-form .old-password-validation-row #ZipCode, .checkout-form .old-password-validation-row #City, .checkout-form .old-password-validation-row #PhoneNumber, .checkout-form .old-password-validation-row #Email, .checkout-form .old-password-validation-row #Password, .checkout-form .old-password-validation-row #ConfirmPassword, .checkout-form .old-password-validation-row #UserData_FirstName,
+    .checkout-form .old-password-validation-row #UserData_LastName, .checkout-form .old-password-validation-row #UserData_Address, .checkout-form .old-password-validation-row #UserData_ZipCode, .checkout-form .old-password-validation-row #UserData_City, .checkout-form .old-password-validation-row #UserData_PhoneNumber, .checkout-form .old-password-validation-row #UserData_Email,
+    .checkout-form .old-password-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .old-password-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .old-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .confirm-password-validation-row #FirstName, .checkout-form .confirm-password-validation-row #LastName, .checkout-form .confirm-password-validation-row #Address, .checkout-form .confirm-password-validation-row #ZipCode, .checkout-form .confirm-password-validation-row #City, .checkout-form .confirm-password-validation-row #PhoneNumber, .checkout-form .confirm-password-validation-row #Email, .checkout-form .confirm-password-validation-row #Password, .checkout-form .confirm-password-validation-row #ConfirmPassword, .checkout-form .confirm-password-validation-row #UserData_FirstName,
+    .checkout-form .confirm-password-validation-row #UserData_LastName, .checkout-form .confirm-password-validation-row #UserData_Address, .checkout-form .confirm-password-validation-row #UserData_ZipCode, .checkout-form .confirm-password-validation-row #UserData_City, .checkout-form .confirm-password-validation-row #UserData_PhoneNumber, .checkout-form .confirm-password-validation-row #UserData_Email,
+    .checkout-form .confirm-password-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .confirm-password-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .confirm-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .password-check-validation-row #FirstName, .checkout-form .password-check-validation-row #LastName, .checkout-form .password-check-validation-row #Address, .checkout-form .password-check-validation-row #ZipCode, .checkout-form .password-check-validation-row #City, .checkout-form .password-check-validation-row #PhoneNumber, .checkout-form .password-check-validation-row #Email, .checkout-form .password-check-validation-row #Password, .checkout-form .password-check-validation-row #ConfirmPassword, .checkout-form .password-check-validation-row #UserData_FirstName,
+    .checkout-form .password-check-validation-row #UserData_LastName, .checkout-form .password-check-validation-row #UserData_Address, .checkout-form .password-check-validation-row #UserData_ZipCode, .checkout-form .password-check-validation-row #UserData_City, .checkout-form .password-check-validation-row #UserData_PhoneNumber, .checkout-form .password-check-validation-row #UserData_Email,
+    .checkout-form .password-check-validation-row #ChangePasswordViewModel_OldPassword, .checkout-form .password-check-validation-row #ChangePasswordViewModel_NewPassword, .checkout-form .password-check-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .checkout-form .remember-row #FirstName,
+    .checkout-form .remember-row #LastName,
+    .checkout-form .remember-row #Address,
+    .checkout-form .remember-row #ZipCode,
+    .checkout-form .remember-row #City,
+    .checkout-form .remember-row #PhoneNumber,
+    .checkout-form .remember-row #Email,
+    .checkout-form .remember-row #Password,
+    .checkout-form .remember-row #ConfirmPassword,
+    .checkout-form .remember-row #UserData_FirstName,
+    .checkout-form .remember-row #UserData_LastName,
+    .checkout-form .remember-row #UserData_Address,
+    .checkout-form .remember-row #UserData_ZipCode,
+    .checkout-form .remember-row #UserData_City,
+    .checkout-form .remember-row #UserData_PhoneNumber,
+    .checkout-form .remember-row #UserData_Email,
+    .checkout-form .remember-row #ChangePasswordViewModel_OldPassword,
+    .checkout-form .remember-row #ChangePasswordViewModel_NewPassword,
+    .checkout-form .remember-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .login-row #FirstName, .checkout-form .login-row #LastName, .checkout-form .login-row #Address, .checkout-form .login-row #ZipCode, .checkout-form .login-row #City, .checkout-form .login-row #PhoneNumber, .checkout-form .login-row #Email, .checkout-form .login-row #Password, .checkout-form .login-row #ConfirmPassword, .checkout-form .login-row #UserData_FirstName,
+    .checkout-form .login-row #UserData_LastName, .checkout-form .login-row #UserData_Address, .checkout-form .login-row #UserData_ZipCode, .checkout-form .login-row #UserData_City, .checkout-form .login-row #UserData_PhoneNumber, .checkout-form .login-row #UserData_Email,
+    .checkout-form .login-row #ChangePasswordViewModel_OldPassword, .checkout-form .login-row #ChangePasswordViewModel_NewPassword, .checkout-form .login-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .register-redirect-row #FirstName, .checkout-form .register-redirect-row #LastName, .checkout-form .register-redirect-row #Address, .checkout-form .register-redirect-row #ZipCode, .checkout-form .register-redirect-row #City, .checkout-form .register-redirect-row #PhoneNumber, .checkout-form .register-redirect-row #Email, .checkout-form .register-redirect-row #Password, .checkout-form .register-redirect-row #ConfirmPassword, .checkout-form .register-redirect-row #UserData_FirstName,
+    .checkout-form .register-redirect-row #UserData_LastName, .checkout-form .register-redirect-row #UserData_Address, .checkout-form .register-redirect-row #UserData_ZipCode, .checkout-form .register-redirect-row #UserData_City, .checkout-form .register-redirect-row #UserData_PhoneNumber, .checkout-form .register-redirect-row #UserData_Email,
+    .checkout-form .register-redirect-row #ChangePasswordViewModel_OldPassword, .checkout-form .register-redirect-row #ChangePasswordViewModel_NewPassword, .checkout-form .register-redirect-row #ChangePasswordViewModel_ConfirmPassword, .checkout-form .register-row #FirstName, .checkout-form .register-row #LastName, .checkout-form .register-row #Address, .checkout-form .register-row #ZipCode, .checkout-form .register-row #City, .checkout-form .register-row #PhoneNumber, .checkout-form .register-row #Email, .checkout-form .register-row #Password, .checkout-form .register-row #ConfirmPassword, .checkout-form .register-row #UserData_FirstName,
+    .checkout-form .register-row #UserData_LastName, .checkout-form .register-row #UserData_Address, .checkout-form .register-row #UserData_ZipCode, .checkout-form .register-row #UserData_City, .checkout-form .register-row #UserData_PhoneNumber, .checkout-form .register-row #UserData_Email,
+    .checkout-form .register-row #ChangePasswordViewModel_OldPassword, .checkout-form .register-row #ChangePasswordViewModel_NewPassword, .checkout-form .register-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .first-name-validation-row #FirstName, .manage-form .first-name-validation-row #LastName, .manage-form .first-name-validation-row #Address, .manage-form .first-name-validation-row #ZipCode, .manage-form .first-name-validation-row #City, .manage-form .first-name-validation-row #PhoneNumber, .manage-form .first-name-validation-row #Email, .manage-form .first-name-validation-row #Password, .manage-form .first-name-validation-row #ConfirmPassword, .manage-form .first-name-validation-row #UserData_FirstName,
+    .manage-form .first-name-validation-row #UserData_LastName, .manage-form .first-name-validation-row #UserData_Address, .manage-form .first-name-validation-row #UserData_ZipCode, .manage-form .first-name-validation-row #UserData_City, .manage-form .first-name-validation-row #UserData_PhoneNumber, .manage-form .first-name-validation-row #UserData_Email,
+    .manage-form .first-name-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .first-name-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .first-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .last-name-validation-row #FirstName, .manage-form .last-name-validation-row #LastName, .manage-form .last-name-validation-row #Address, .manage-form .last-name-validation-row #ZipCode, .manage-form .last-name-validation-row #City, .manage-form .last-name-validation-row #PhoneNumber, .manage-form .last-name-validation-row #Email, .manage-form .last-name-validation-row #Password, .manage-form .last-name-validation-row #ConfirmPassword, .manage-form .last-name-validation-row #UserData_FirstName,
+    .manage-form .last-name-validation-row #UserData_LastName, .manage-form .last-name-validation-row #UserData_Address, .manage-form .last-name-validation-row #UserData_ZipCode, .manage-form .last-name-validation-row #UserData_City, .manage-form .last-name-validation-row #UserData_PhoneNumber, .manage-form .last-name-validation-row #UserData_Email,
+    .manage-form .last-name-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .last-name-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .last-name-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .address-validation-row #FirstName, .manage-form .address-validation-row #LastName, .manage-form .address-validation-row #Address, .manage-form .address-validation-row #ZipCode, .manage-form .address-validation-row #City, .manage-form .address-validation-row #PhoneNumber, .manage-form .address-validation-row #Email, .manage-form .address-validation-row #Password, .manage-form .address-validation-row #ConfirmPassword, .manage-form .address-validation-row #UserData_FirstName,
+    .manage-form .address-validation-row #UserData_LastName, .manage-form .address-validation-row #UserData_Address, .manage-form .address-validation-row #UserData_ZipCode, .manage-form .address-validation-row #UserData_City, .manage-form .address-validation-row #UserData_PhoneNumber, .manage-form .address-validation-row #UserData_Email,
+    .manage-form .address-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .address-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .address-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .zip-code-validation-row #FirstName, .manage-form .zip-code-validation-row #LastName, .manage-form .zip-code-validation-row #Address, .manage-form .zip-code-validation-row #ZipCode, .manage-form .zip-code-validation-row #City, .manage-form .zip-code-validation-row #PhoneNumber, .manage-form .zip-code-validation-row #Email, .manage-form .zip-code-validation-row #Password, .manage-form .zip-code-validation-row #ConfirmPassword, .manage-form .zip-code-validation-row #UserData_FirstName,
+    .manage-form .zip-code-validation-row #UserData_LastName, .manage-form .zip-code-validation-row #UserData_Address, .manage-form .zip-code-validation-row #UserData_ZipCode, .manage-form .zip-code-validation-row #UserData_City, .manage-form .zip-code-validation-row #UserData_PhoneNumber, .manage-form .zip-code-validation-row #UserData_Email,
+    .manage-form .zip-code-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .zip-code-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .zip-code-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .manage-form .city-validation-row #FirstName,
+    .manage-form .city-validation-row #LastName,
+    .manage-form .city-validation-row #Address,
+    .manage-form .city-validation-row #ZipCode,
+    .manage-form .city-validation-row #City,
+    .manage-form .city-validation-row #PhoneNumber,
+    .manage-form .city-validation-row #Email,
+    .manage-form .city-validation-row #Password,
+    .manage-form .city-validation-row #ConfirmPassword,
+    .manage-form .city-validation-row #UserData_FirstName,
+    .manage-form .city-validation-row #UserData_LastName,
+    .manage-form .city-validation-row #UserData_Address,
+    .manage-form .city-validation-row #UserData_ZipCode,
+    .manage-form .city-validation-row #UserData_City,
+    .manage-form .city-validation-row #UserData_PhoneNumber,
+    .manage-form .city-validation-row #UserData_Email,
+    .manage-form .city-validation-row #ChangePasswordViewModel_OldPassword,
+    .manage-form .city-validation-row #ChangePasswordViewModel_NewPassword,
+    .manage-form .city-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .phone-validation-row #FirstName, .manage-form .phone-validation-row #LastName, .manage-form .phone-validation-row #Address, .manage-form .phone-validation-row #ZipCode, .manage-form .phone-validation-row #City, .manage-form .phone-validation-row #PhoneNumber, .manage-form .phone-validation-row #Email, .manage-form .phone-validation-row #Password, .manage-form .phone-validation-row #ConfirmPassword, .manage-form .phone-validation-row #UserData_FirstName,
+    .manage-form .phone-validation-row #UserData_LastName, .manage-form .phone-validation-row #UserData_Address, .manage-form .phone-validation-row #UserData_ZipCode, .manage-form .phone-validation-row #UserData_City, .manage-form .phone-validation-row #UserData_PhoneNumber, .manage-form .phone-validation-row #UserData_Email,
+    .manage-form .phone-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .phone-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .phone-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .email-validation-row #FirstName, .manage-form .email-validation-row #LastName, .manage-form .email-validation-row #Address, .manage-form .email-validation-row #ZipCode, .manage-form .email-validation-row #City, .manage-form .email-validation-row #PhoneNumber, .manage-form .email-validation-row #Email, .manage-form .email-validation-row #Password, .manage-form .email-validation-row #ConfirmPassword, .manage-form .email-validation-row #UserData_FirstName,
+    .manage-form .email-validation-row #UserData_LastName, .manage-form .email-validation-row #UserData_Address, .manage-form .email-validation-row #UserData_ZipCode, .manage-form .email-validation-row #UserData_City, .manage-form .email-validation-row #UserData_PhoneNumber, .manage-form .email-validation-row #UserData_Email,
+    .manage-form .email-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .email-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .email-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .password-validation-row #FirstName, .manage-form .password-validation-row #LastName, .manage-form .password-validation-row #Address, .manage-form .password-validation-row #ZipCode, .manage-form .password-validation-row #City, .manage-form .password-validation-row #PhoneNumber, .manage-form .password-validation-row #Email, .manage-form .password-validation-row #Password, .manage-form .password-validation-row #ConfirmPassword, .manage-form .password-validation-row #UserData_FirstName,
+    .manage-form .password-validation-row #UserData_LastName, .manage-form .password-validation-row #UserData_Address, .manage-form .password-validation-row #UserData_ZipCode, .manage-form .password-validation-row #UserData_City, .manage-form .password-validation-row #UserData_PhoneNumber, .manage-form .password-validation-row #UserData_Email,
+    .manage-form .password-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .password-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .password-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .manage-form .new-password-validation-row #FirstName,
+    .manage-form .new-password-validation-row #LastName,
+    .manage-form .new-password-validation-row #Address,
+    .manage-form .new-password-validation-row #ZipCode,
+    .manage-form .new-password-validation-row #City,
+    .manage-form .new-password-validation-row #PhoneNumber,
+    .manage-form .new-password-validation-row #Email,
+    .manage-form .new-password-validation-row #Password,
+    .manage-form .new-password-validation-row #ConfirmPassword,
+    .manage-form .new-password-validation-row #UserData_FirstName,
+    .manage-form .new-password-validation-row #UserData_LastName,
+    .manage-form .new-password-validation-row #UserData_Address,
+    .manage-form .new-password-validation-row #UserData_ZipCode,
+    .manage-form .new-password-validation-row #UserData_City,
+    .manage-form .new-password-validation-row #UserData_PhoneNumber,
+    .manage-form .new-password-validation-row #UserData_Email,
+    .manage-form .new-password-validation-row #ChangePasswordViewModel_OldPassword,
+    .manage-form .new-password-validation-row #ChangePasswordViewModel_NewPassword,
+    .manage-form .new-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .old-password-validation-row #FirstName, .manage-form .old-password-validation-row #LastName, .manage-form .old-password-validation-row #Address, .manage-form .old-password-validation-row #ZipCode, .manage-form .old-password-validation-row #City, .manage-form .old-password-validation-row #PhoneNumber, .manage-form .old-password-validation-row #Email, .manage-form .old-password-validation-row #Password, .manage-form .old-password-validation-row #ConfirmPassword, .manage-form .old-password-validation-row #UserData_FirstName,
+    .manage-form .old-password-validation-row #UserData_LastName, .manage-form .old-password-validation-row #UserData_Address, .manage-form .old-password-validation-row #UserData_ZipCode, .manage-form .old-password-validation-row #UserData_City, .manage-form .old-password-validation-row #UserData_PhoneNumber, .manage-form .old-password-validation-row #UserData_Email,
+    .manage-form .old-password-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .old-password-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .old-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .confirm-password-validation-row #FirstName, .manage-form .confirm-password-validation-row #LastName, .manage-form .confirm-password-validation-row #Address, .manage-form .confirm-password-validation-row #ZipCode, .manage-form .confirm-password-validation-row #City, .manage-form .confirm-password-validation-row #PhoneNumber, .manage-form .confirm-password-validation-row #Email, .manage-form .confirm-password-validation-row #Password, .manage-form .confirm-password-validation-row #ConfirmPassword, .manage-form .confirm-password-validation-row #UserData_FirstName,
+    .manage-form .confirm-password-validation-row #UserData_LastName, .manage-form .confirm-password-validation-row #UserData_Address, .manage-form .confirm-password-validation-row #UserData_ZipCode, .manage-form .confirm-password-validation-row #UserData_City, .manage-form .confirm-password-validation-row #UserData_PhoneNumber, .manage-form .confirm-password-validation-row #UserData_Email,
+    .manage-form .confirm-password-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .confirm-password-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .confirm-password-validation-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .password-check-validation-row #FirstName, .manage-form .password-check-validation-row #LastName, .manage-form .password-check-validation-row #Address, .manage-form .password-check-validation-row #ZipCode, .manage-form .password-check-validation-row #City, .manage-form .password-check-validation-row #PhoneNumber, .manage-form .password-check-validation-row #Email, .manage-form .password-check-validation-row #Password, .manage-form .password-check-validation-row #ConfirmPassword, .manage-form .password-check-validation-row #UserData_FirstName,
+    .manage-form .password-check-validation-row #UserData_LastName, .manage-form .password-check-validation-row #UserData_Address, .manage-form .password-check-validation-row #UserData_ZipCode, .manage-form .password-check-validation-row #UserData_City, .manage-form .password-check-validation-row #UserData_PhoneNumber, .manage-form .password-check-validation-row #UserData_Email,
+    .manage-form .password-check-validation-row #ChangePasswordViewModel_OldPassword, .manage-form .password-check-validation-row #ChangePasswordViewModel_NewPassword, .manage-form .password-check-validation-row #ChangePasswordViewModel_ConfirmPassword,
+    .manage-form .remember-row #FirstName,
+    .manage-form .remember-row #LastName,
+    .manage-form .remember-row #Address,
+    .manage-form .remember-row #ZipCode,
+    .manage-form .remember-row #City,
+    .manage-form .remember-row #PhoneNumber,
+    .manage-form .remember-row #Email,
+    .manage-form .remember-row #Password,
+    .manage-form .remember-row #ConfirmPassword,
+    .manage-form .remember-row #UserData_FirstName,
+    .manage-form .remember-row #UserData_LastName,
+    .manage-form .remember-row #UserData_Address,
+    .manage-form .remember-row #UserData_ZipCode,
+    .manage-form .remember-row #UserData_City,
+    .manage-form .remember-row #UserData_PhoneNumber,
+    .manage-form .remember-row #UserData_Email,
+    .manage-form .remember-row #ChangePasswordViewModel_OldPassword,
+    .manage-form .remember-row #ChangePasswordViewModel_NewPassword,
+    .manage-form .remember-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .login-row #FirstName, .manage-form .login-row #LastName, .manage-form .login-row #Address, .manage-form .login-row #ZipCode, .manage-form .login-row #City, .manage-form .login-row #PhoneNumber, .manage-form .login-row #Email, .manage-form .login-row #Password, .manage-form .login-row #ConfirmPassword, .manage-form .login-row #UserData_FirstName,
+    .manage-form .login-row #UserData_LastName, .manage-form .login-row #UserData_Address, .manage-form .login-row #UserData_ZipCode, .manage-form .login-row #UserData_City, .manage-form .login-row #UserData_PhoneNumber, .manage-form .login-row #UserData_Email,
+    .manage-form .login-row #ChangePasswordViewModel_OldPassword, .manage-form .login-row #ChangePasswordViewModel_NewPassword, .manage-form .login-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .register-redirect-row #FirstName, .manage-form .register-redirect-row #LastName, .manage-form .register-redirect-row #Address, .manage-form .register-redirect-row #ZipCode, .manage-form .register-redirect-row #City, .manage-form .register-redirect-row #PhoneNumber, .manage-form .register-redirect-row #Email, .manage-form .register-redirect-row #Password, .manage-form .register-redirect-row #ConfirmPassword, .manage-form .register-redirect-row #UserData_FirstName,
+    .manage-form .register-redirect-row #UserData_LastName, .manage-form .register-redirect-row #UserData_Address, .manage-form .register-redirect-row #UserData_ZipCode, .manage-form .register-redirect-row #UserData_City, .manage-form .register-redirect-row #UserData_PhoneNumber, .manage-form .register-redirect-row #UserData_Email,
+    .manage-form .register-redirect-row #ChangePasswordViewModel_OldPassword, .manage-form .register-redirect-row #ChangePasswordViewModel_NewPassword, .manage-form .register-redirect-row #ChangePasswordViewModel_ConfirmPassword, .manage-form .register-row #FirstName, .manage-form .register-row #LastName, .manage-form .register-row #Address, .manage-form .register-row #ZipCode, .manage-form .register-row #City, .manage-form .register-row #PhoneNumber, .manage-form .register-row #Email, .manage-form .register-row #Password, .manage-form .register-row #ConfirmPassword, .manage-form .register-row #UserData_FirstName,
+    .manage-form .register-row #UserData_LastName, .manage-form .register-row #UserData_Address, .manage-form .register-row #UserData_ZipCode, .manage-form .register-row #UserData_City, .manage-form .register-row #UserData_PhoneNumber, .manage-form .register-row #UserData_Email,
+    .manage-form .register-row #ChangePasswordViewModel_OldPassword, .manage-form .register-row #ChangePasswordViewModel_NewPassword, .manage-form .register-row #ChangePasswordViewModel_ConfirmPassword {
+      width: 250px;
+      height: 35px;
+      font-size: 1.25em;
+      border: 2px solid #343a40; }
+  .register-form .password-check-validation-row, .login-form .password-check-validation-row, .checkout-form .password-check-validation-row, .manage-form .password-check-validation-row {
+    margin-bottom: 20px;
+    padding-bottom: 40px; }
+    .register-form .password-check-validation-row #ConfirmPassword, .login-form .password-check-validation-row #ConfirmPassword, .checkout-form .password-check-validation-row #ConfirmPassword, .manage-form .password-check-validation-row #ConfirmPassword {
+      width: 250px;
+      height: 35px;
+      font-size: 1.25rem;
+      border: 2px solid #343a40; }
+  .register-form .register-row .submit-link, .register-form .register-row .redirect-link, .register-form .register-row .back-link, .register-form .login-row .submit-link, .register-form .login-row .redirect-link, .register-form .login-row .back-link, .register-form .register-redirect-row .submit-link, .register-form .register-redirect-row .redirect-link, .register-form .register-redirect-row .back-link, .register-form .change-password-link .submit-link, .register-form .change-password-link .redirect-link, .register-form .change-password-link .back-link, .register-form .accept-row .submit-link, .register-form .accept-row .redirect-link, .register-form .accept-row .back-link, .register-form .back-row .submit-link, .register-form .back-row .redirect-link, .register-form .back-row .back-link, .register-form .confirm-row .submit-link, .register-form .confirm-row .redirect-link, .register-form .confirm-row .back-link, .login-form .register-row .submit-link, .login-form .register-row .redirect-link, .login-form .register-row .back-link, .login-form .login-row .submit-link, .login-form .login-row .redirect-link, .login-form .login-row .back-link, .login-form .register-redirect-row .submit-link, .login-form .register-redirect-row .redirect-link, .login-form .register-redirect-row .back-link, .login-form .change-password-link .submit-link, .login-form .change-password-link .redirect-link, .login-form .change-password-link .back-link, .login-form .accept-row .submit-link, .login-form .accept-row .redirect-link, .login-form .accept-row .back-link, .login-form .back-row .submit-link, .login-form .back-row .redirect-link, .login-form .back-row .back-link, .login-form .confirm-row .submit-link, .login-form .confirm-row .redirect-link, .login-form .confirm-row .back-link, .checkout-form .register-row .submit-link, .checkout-form .register-row .redirect-link, .checkout-form .register-row .back-link, .checkout-form .login-row .submit-link, .checkout-form .login-row .redirect-link, .checkout-form .login-row .back-link, .checkout-form .register-redirect-row .submit-link, .checkout-form .register-redirect-row .redirect-link, .checkout-form .register-redirect-row .back-link, .checkout-form .change-password-link .submit-link, .checkout-form .change-password-link .redirect-link, .checkout-form .change-password-link .back-link, .checkout-form .accept-row .submit-link, .checkout-form .accept-row .redirect-link, .checkout-form .accept-row .back-link, .checkout-form .back-row .submit-link, .checkout-form .back-row .redirect-link, .checkout-form .back-row .back-link, .checkout-form .confirm-row .submit-link, .checkout-form .confirm-row .redirect-link, .checkout-form .confirm-row .back-link, .manage-form .register-row .submit-link, .manage-form .register-row .redirect-link, .manage-form .register-row .back-link, .manage-form .login-row .submit-link, .manage-form .login-row .redirect-link, .manage-form .login-row .back-link, .manage-form .register-redirect-row .submit-link, .manage-form .register-redirect-row .redirect-link, .manage-form .register-redirect-row .back-link, .manage-form .change-password-link .submit-link, .manage-form .change-password-link .redirect-link, .manage-form .change-password-link .back-link, .manage-form .accept-row .submit-link, .manage-form .accept-row .redirect-link, .manage-form .accept-row .back-link, .manage-form .back-row .submit-link, .manage-form .back-row .redirect-link, .manage-form .back-row .back-link, .manage-form .confirm-row .submit-link, .manage-form .confirm-row .redirect-link, .manage-form .confirm-row .back-link {
+    text-decoration: none;
+    font-weight: 600;
+    height: 50px;
+    width: 184px;
+    background-color: white;
+    color: black;
+    border: 2px solid #343a40; }
+  .register-form .comment-row .text-area, .login-form .comment-row .text-area, .checkout-form .comment-row .text-area, .manage-form .comment-row .text-area {
+    border: 2px solid #343a40;
+    font-weight: 600; }
+  .register-form .back-row, .login-form .back-row, .checkout-form .back-row, .manage-form .back-row {
+    margin-top: 10px;
+    height: 50px;
+    width: 184px;
+    background-color: white;
+    color: black; }
+    .register-form .back-row .back-link, .login-form .back-row .back-link, .checkout-form .back-row .back-link, .manage-form .back-row .back-link {
+      width: 184px;
+      height: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      color: black; }
+  .register-form .login-row, .login-form .login-row, .checkout-form .login-row, .manage-form .login-row {
+    margin-bottom: 15px; }
+  .register-form .remember-row, .login-form .remember-row, .checkout-form .remember-row, .manage-form .remember-row {
+    margin-bottom: 15px;
+    padding-bottom: 20px; }
+
+@media only screen and (max-width: 576px) {
+  .order-confirmation-content {
+    min-height: 226px; } }
+
+@media only screen and (min-width: 577px) {
+  .order-confirmation-content {
+    min-height: 724px; } }
+
+@media only screen and (min-width: 992px) {
+  .order-confirmation-content {
+    min-height: 1046px; } }
+
+@media only screen and (min-width: 1200px) {
+  .order-confirmation-content {
+    min-height: 669px; } }
+
+@media only screen and (max-width: 576px) {
+  .order-confirmation-content .order-confirmation-container h1 {
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: Consolas;
+    text-transform: none;
+    border-top: 6px double black;
+    border-bottom: 6px double black;
+    color: black; } }
+
+@media only screen and (min-width: 577px) {
+  .order-confirmation-content .order-confirmation-container h1 {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: Consolas;
+    text-transform: none;
+    border-top: 6px double black;
+    border-bottom: 6px double black;
+    color: black; } }
+
+@media only screen and (min-width: 992px) {
+  .order-confirmation-content .order-confirmation-container h1 {
+    font-size: 3em;
+    font-weight: 600;
+    font-family: Consolas;
+    text-transform: none;
+    border-top: 8px double black;
+    border-bottom: 8px double black;
+    color: black; } }
+
+.product-manage-content {
+  padding-top: 15px;
+  border-bottom: 2px solid black; }
+  .product-manage-content h1 {
+    font-size: 2.5em;
+    width: max-content;
+    color: black;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black; }
+    @media only screen and (max-width: 576px) {
+      .product-manage-content h1 {
+        font-size: 1.5em; } }
+  .product-manage-content label {
+    font-weight: 600; }
+  .product-manage-content .heading-row, .product-manage-content .product-name-row, .product-manage-content .product-desc-row, .product-manage-content .price-row, .product-manage-content .category-choice-row,
+  .product-manage-content .file-upload-row, .product-manage-content .unhide-product-row, .product-manage-content .hide-product-row, .product-manage-content .save-row {
+    margin-bottom: 5px; }
+    .product-manage-content .heading-row #Product_CategoryId, .product-manage-content .product-name-row #Product_CategoryId, .product-manage-content .product-desc-row #Product_CategoryId, .product-manage-content .price-row #Product_CategoryId, .product-manage-content .category-choice-row #Product_CategoryId,
+    .product-manage-content .file-upload-row #Product_CategoryId, .product-manage-content .unhide-product-row #Product_CategoryId, .product-manage-content .hide-product-row #Product_CategoryId, .product-manage-content .save-row #Product_CategoryId {
+      width: 395px; }
+      @media only screen and (max-width: 767px) {
+        .product-manage-content .heading-row #Product_CategoryId, .product-manage-content .product-name-row #Product_CategoryId, .product-manage-content .product-desc-row #Product_CategoryId, .product-manage-content .price-row #Product_CategoryId, .product-manage-content .category-choice-row #Product_CategoryId,
+        .product-manage-content .file-upload-row #Product_CategoryId, .product-manage-content .unhide-product-row #Product_CategoryId, .product-manage-content .hide-product-row #Product_CategoryId, .product-manage-content .save-row #Product_CategoryId {
+          width: 250px; } }
+    .product-manage-content .heading-row #Product_ProductName, .product-manage-content .heading-row #Product_Description, .product-manage-content .heading-row #Product_Price, .product-manage-content .product-name-row #Product_ProductName, .product-manage-content .product-name-row #Product_Description, .product-manage-content .product-name-row #Product_Price, .product-manage-content .product-desc-row #Product_ProductName, .product-manage-content .product-desc-row #Product_Description, .product-manage-content .product-desc-row #Product_Price, .product-manage-content .price-row #Product_ProductName, .product-manage-content .price-row #Product_Description, .product-manage-content .price-row #Product_Price, .product-manage-content .category-choice-row #Product_ProductName, .product-manage-content .category-choice-row #Product_Description, .product-manage-content .category-choice-row #Product_Price,
+    .product-manage-content .file-upload-row #Product_ProductName,
+    .product-manage-content .file-upload-row #Product_Description,
+    .product-manage-content .file-upload-row #Product_Price, .product-manage-content .unhide-product-row #Product_ProductName, .product-manage-content .unhide-product-row #Product_Description, .product-manage-content .unhide-product-row #Product_Price, .product-manage-content .hide-product-row #Product_ProductName, .product-manage-content .hide-product-row #Product_Description, .product-manage-content .hide-product-row #Product_Price, .product-manage-content .save-row #Product_ProductName, .product-manage-content .save-row #Product_Description, .product-manage-content .save-row #Product_Price {
+      width: 395px;
+      height: 35px;
+      font-size: 1.25rem;
+      border: 2px solid #343a40; }
+      @media only screen and (max-width: 767px) {
+        .product-manage-content .heading-row #Product_ProductName, .product-manage-content .heading-row #Product_Description, .product-manage-content .heading-row #Product_Price, .product-manage-content .product-name-row #Product_ProductName, .product-manage-content .product-name-row #Product_Description, .product-manage-content .product-name-row #Product_Price, .product-manage-content .product-desc-row #Product_ProductName, .product-manage-content .product-desc-row #Product_Description, .product-manage-content .product-desc-row #Product_Price, .product-manage-content .price-row #Product_ProductName, .product-manage-content .price-row #Product_Description, .product-manage-content .price-row #Product_Price, .product-manage-content .category-choice-row #Product_ProductName, .product-manage-content .category-choice-row #Product_Description, .product-manage-content .category-choice-row #Product_Price,
+        .product-manage-content .file-upload-row #Product_ProductName,
+        .product-manage-content .file-upload-row #Product_Description,
+        .product-manage-content .file-upload-row #Product_Price, .product-manage-content .unhide-product-row #Product_ProductName, .product-manage-content .unhide-product-row #Product_Description, .product-manage-content .unhide-product-row #Product_Price, .product-manage-content .hide-product-row #Product_ProductName, .product-manage-content .hide-product-row #Product_Description, .product-manage-content .hide-product-row #Product_Price, .product-manage-content .save-row #Product_ProductName, .product-manage-content .save-row #Product_Description, .product-manage-content .save-row #Product_Price {
+          width: 250px; } }
+    .product-manage-content .heading-row #Product_CategoryId, .product-manage-content .product-name-row #Product_CategoryId, .product-manage-content .product-desc-row #Product_CategoryId, .product-manage-content .price-row #Product_CategoryId, .product-manage-content .category-choice-row #Product_CategoryId,
+    .product-manage-content .file-upload-row #Product_CategoryId, .product-manage-content .unhide-product-row #Product_CategoryId, .product-manage-content .hide-product-row #Product_CategoryId, .product-manage-content .save-row #Product_CategoryId {
+      height: 35px;
+      font-size: 1.25rem;
+      border: 2px solid #343a40; }
+    .product-manage-content .heading-row .file-upload-button .input-file, .product-manage-content .product-name-row .file-upload-button .input-file, .product-manage-content .product-desc-row .file-upload-button .input-file, .product-manage-content .price-row .file-upload-button .input-file, .product-manage-content .category-choice-row .file-upload-button .input-file,
+    .product-manage-content .file-upload-row .file-upload-button .input-file, .product-manage-content .unhide-product-row .file-upload-button .input-file, .product-manage-content .hide-product-row .file-upload-button .input-file, .product-manage-content .save-row .file-upload-button .input-file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1; }
+    .product-manage-content .heading-row .file-upload-button label, .product-manage-content .product-name-row .file-upload-button label, .product-manage-content .product-desc-row .file-upload-button label, .product-manage-content .price-row .file-upload-button label, .product-manage-content .category-choice-row .file-upload-button label,
+    .product-manage-content .file-upload-row .file-upload-button label, .product-manage-content .unhide-product-row .file-upload-button label, .product-manage-content .hide-product-row .file-upload-button label, .product-manage-content .save-row .file-upload-button label {
+      margin-top: 10px;
+      height: 50px;
+      width: 184px;
+      font-weight: 600;
+      background-color: white;
+      color: black;
+      border: 2px solid black; }
+    .product-manage-content .heading-row .delete-button, .product-manage-content .heading-row .unhide-button, .product-manage-content .product-name-row .delete-button, .product-manage-content .product-name-row .unhide-button, .product-manage-content .product-desc-row .delete-button, .product-manage-content .product-desc-row .unhide-button, .product-manage-content .price-row .delete-button, .product-manage-content .price-row .unhide-button, .product-manage-content .category-choice-row .delete-button, .product-manage-content .category-choice-row .unhide-button,
+    .product-manage-content .file-upload-row .delete-button,
+    .product-manage-content .file-upload-row .unhide-button, .product-manage-content .unhide-product-row .delete-button, .product-manage-content .unhide-product-row .unhide-button, .product-manage-content .hide-product-row .delete-button, .product-manage-content .hide-product-row .unhide-button, .product-manage-content .save-row .delete-button, .product-manage-content .save-row .unhide-button {
+      text-decoration: none;
+      margin-top: 10px;
+      height: 50px;
+      width: 184px;
+      font-weight: 600;
+      background-color: white;
+      color: black;
+      border: 0;
+      border: 2px solid black; }
+    .product-manage-content .heading-row .submitLink, .product-manage-content .product-name-row .submitLink, .product-manage-content .product-desc-row .submitLink, .product-manage-content .price-row .submitLink, .product-manage-content .category-choice-row .submitLink,
+    .product-manage-content .file-upload-row .submitLink, .product-manage-content .unhide-product-row .submitLink, .product-manage-content .hide-product-row .submitLink, .product-manage-content .save-row .submitLink {
+      margin-top: 10px;
+      height: 50px;
+      width: 184px;
+      font-weight: 600;
+      background-color: white;
+      color: black;
+      border: 0;
+      border: 2px solid black; }
+
+.orders-list-content {
+  padding-top: 15px;
+  border-bottom: 2px solid black; }
+  .orders-list-content .heading-row {
+    margin-bottom: 15px; }
+    .orders-list-content .heading-row h1 {
+      font-size: 2.5em;
+      width: max-content;
+      color: black;
+      padding-bottom: 10px;
+      border-bottom: 3px solid black; }
+  .orders-list-content span {
+    font-weight: 600;
+    color: black; }
+  .orders-list-content select {
+    font-weight: 600;
+    width: 200px; }
+    .orders-list-content select option {
+      font-weight: 600; }
+  .orders-list-content section {
+    padding-left: 10px;
+    margin-bottom: 10px; }
+  .orders-list-content .orderNew {
+    background-color: white;
+    border: 2px solid black; }
+  .orders-list-content .orderProcessed {
+    background-color: white;
+    border: 2px solid black; }
+  .orders-list-content .orderShipped {
+    background-color: white;
+    border: 2px solid black; }
+  .orders-list-content .order-items-row {
+    margin-top: 15px; }
+    .orders-list-content .order-items-row ul li .order-item-info {
+      margin-bottom: 5px; }
+      .orders-list-content .order-items-row ul li .order-item-info img {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black; }
+      .orders-list-content .order-items-row ul li .order-item-info .overlay-photo {
+        position: relative; }
+        .orders-list-content .order-items-row ul li .order-item-info .overlay-photo .color-overlay {
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          opacity: 0.1;
+          position: absolute;
+          top: 0;
+          left: 0; }

@@ -1,0 +1,249 @@
+﻿@model Disabled.ViewModels.ManageCredentialsViewModel
+
+@{
+    ViewBag.Title = "Disabled. | Zarządzanie kontem";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="container manage-form d-flex align-items-center pt-3">
+        <div class="row user-data-row">
+            <div class="col-12 col-md-6">
+                @using (Html.BeginForm("ChangeProfile", "Manage"))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="container user-data-container">
+                        <div class="row">
+                            <div class="col">
+                                <h1>Moje dane</h1>
+                            </div>
+                        </div>
+
+                        <div class="row register-error-row">
+                            <div class="col" id="login-error">
+                                @Html.ValidationMessage("loginerror", "")
+                                @Html.ValidationSummary()
+                            </div>
+                        </div>
+
+                        <div class="row first-name-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.FirstName, "Imię:")
+                            </div>
+                        </div>
+
+                        <div class="row first-name-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.FirstName)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.FirstName)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row last-name-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.LastName, "Nazwisko:")
+                            </div>
+                        </div>
+
+                        <div class="row last-name-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.LastName)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.LastName)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row address-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.Address, "Adres:")
+                            </div>
+                        </div>
+
+                        <div class="row address-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.Address)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.Address)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row zip-code-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.ZipCode, "Kod pocztowy:")
+                            </div>
+                        </div>
+
+                        <div class="row zip-code-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.ZipCode)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.ZipCode)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row city-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.City, "Miasto:")
+                            </div>
+                        </div>
+
+                        <div class="row city-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.City)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.City)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row phone-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.PhoneNumber, "Numer telefonu:")
+                            </div>
+                        </div>
+
+                        <div class="row phone-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.PhoneNumber)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.PhoneNumber)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row email-row">
+                            <div class="col">
+                                @Html.LabelFor(o => o.UserData.Email, "Adres e-mail:")
+                            </div>
+                        </div>
+
+                        <div class="row email-validation-row">
+                            <div class="col">
+                                @Html.TextBoxFor(o => o.UserData.Email)
+                                <div class="login-validation-message">
+                                    @Html.ValidationMessageFor(o => o.UserData.Email)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row accept-row mt-3">
+                            <div class="col">
+                                <input type="submit" value="Potwierdź" class="submit-link" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="col-12 col-md-6">
+                @if (Model.HasPassword)
+                {
+                    <div class="container change-password-container">
+                        <div class="row change-password-heading">
+                            <div class="col">
+                                <h1>Zmiana hasła</h1>
+                            </div>
+                        </div>
+                        @using (Html.BeginForm("ChangePassword", "Manage", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="manage-error">
+                                @Html.ValidationMessage("password-error", "")
+                            </div>
+
+                            if (Model.Message.HasValue)
+                            {
+                                <div class="manage-message">
+                                    @switch (Model.Message)
+                                    {
+                                        case Disabled.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess:
+                                            @: Hasło zmienione pomyślnie!
+                                            break;
+                                        case Disabled.Controllers.ManageController.ManageMessageId.SetPasswordSuccess:
+                                            @: Hasło dodane pomyślnie!
+                                            break;
+                                        case Disabled.Controllers.ManageController.ManageMessageId.Error:
+                                            @: Wystąpił błąd
+                                            break;
+                                    }
+                                </div>
+                            }
+
+                            <div class="row old-password-row">
+                                <div class="col">
+                                    @Html.LabelFor(o => o.ChangePasswordViewModel.OldPassword, "Stare hasło:")
+                                </div>
+                            </div>
+
+                            <div class="row old-password-validation-row">
+                                <div class="col">
+                                    @Html.PasswordFor(o => o.ChangePasswordViewModel.OldPassword)
+                                    <div class="login-validation-message">
+                                        @Html.ValidationMessageFor(o => o.ChangePasswordViewModel.OldPassword)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row new-password-row">
+                                <div class="col">
+                                    @Html.LabelFor(o => o.ChangePasswordViewModel.NewPassword, "Nowe hasło:")
+                                </div>
+                            </div>
+
+                            <div class="row new-password-validation-row">
+                                <div class="col">
+                                    @Html.PasswordFor(o => o.ChangePasswordViewModel.NewPassword)
+                                    <div class="login-validation-message">
+                                        @Html.ValidationMessageFor(o => o.ChangePasswordViewModel.NewPassword)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row confirm-password-row">
+                                <div class="col">
+                                    @Html.LabelFor(o => o.ChangePasswordViewModel.ConfirmPassword, "Potwierdź hasło:")
+                                </div>
+                            </div>
+
+                            <div class="row confirm-password-validation-row">
+                                <div class="col">
+                                    @Html.PasswordFor(o => o.ChangePasswordViewModel.ConfirmPassword)
+                                    <div class="login-validation-message">
+                                        @Html.ValidationMessageFor(o => o.ChangePasswordViewModel.ConfirmPassword)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row change-password-link mt-3">
+                                <div class="col">
+                                    <input type="submit" value="Zmień hasło" class="submit-link" />
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

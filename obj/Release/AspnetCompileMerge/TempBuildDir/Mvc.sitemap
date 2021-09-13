@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Start" controller="Home" action="Index">
+    <mvcSiteMapNode title="Sklep" controller="Shop" action="Index">
+      <mvcSiteMapNode title="Wyszukaj" controller="Shop" action="Search"/>
+      <mvcSiteMapNode title="Dodawanie/Edycja produktu" controller="Manage" action="AddProduct"/>
+      <mvcSiteMapNode title="Kategoria" controller="Shop" action="ProductList" dynamicNodeProvider="Disabled.Infrastructure.ProductListDynamicNodeProvider, Disabled">
+        <mvcSiteMapNode title="Produkt" controller="Shop" action="ProductDetails" dynamicNodeProvider="Disabled.Infrastructure.ProductDetailsDynamicNodeProvider, Disabled" preservedRouteParameters="categoryname" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Koszyk" controller="Cart" action="Index" >
+      <mvcSiteMapNode title="Podsumowanie" controller="Cart" action="Checkout"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Logowanie" controller="Account" action="Login" />
+    <mvcSiteMapNode title="Rejestracja" controller="Account" action="Register"/>
+    <mvcSiteMapNode title="Zarządzanie" controller="Manage" action="Index"/>
+    <mvcSiteMapNode title="Historia zamówień" controller="Manage" action="OrdersList"/>
+  </mvcSiteMapNode>
+</mvcSiteMap>

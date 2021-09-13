@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Disabled.Models.Order>
+@{
+    ViewBag.Title = "Disabled. | Zamówienia";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="orders-list-content background">
+    <div class="container">
+        <div class="row heading-row">
+            <div class="col">
+                <h1>Historia zamówień</h1>
+            </div>
+        </div>
+        @if (Model.Any())
+        {
+            foreach (var order in Model)
+            {
+                <section @if (order.OrderState == Disabled.Models.OrderState.New) { <text> class="orderNew" </text>  } else if (order.OrderState == Disabled.Models.OrderState.Processed) { <text> class="orderProcessed" </text>  } else { <text> class="orderShipped" </text> }>
+                    <div class="row order-number-row">
+                        <div class="col">
+                            <span>Nr. zamówienia: @order.OrderId</span>
+                        </div>
+                    </div>
+                    <div class="row order-date-row">
+                        <div class="col">
+                            <span>Data: @order.DateCreated.ToString("dd-MM-yyyy")</span>
+                        </div>
+                    </div>
+                    <div class="row order-state-row">
+                        <div class="col d-flex">
+                            <span class="pr-1">Stan: </span>
+                            @if (ViewBag.UserIsAdmin || ViewBag.UserIsEmployee)
+                            {
+                                using (Html.BeginForm("ChangeOrderState", "Manage"))
+                                {
+                                    @Html.HiddenFor(o => order.OrderId)
+                                    @Html.EnumDropDownListFor(o => order.OrderState, new { @class = "orderstateddl" })
+                                }
+                            }
+                            else
+                            {
+                                @Html.DisplayFor(o => order.OrderState)
+                            }
+                        </div>
+                    </div>
+                    <div class="row shipping-details-row">
+                        <div class="col d-flex flex-column">
+                            <span>Dane wysyłkowe:</span>
+                            <span>Imię: @order.FirstName</span>
+                            <span>Nazwisko: @order.LastName</span>
+                            <span>Ulica i nr. domu: @order.Address</span>
+                            <span>Kod pocztowy: @order.ZipCode</span>
+                            <span>Miasto: @order.City</span>
+                        </div>
+                    </div>
+                    <div class="row comment-row">
+                        <div class="col">
+                            <span>@order.Comment</span>
+                        </div>
+                    </div>
+                    <div class="row total-price-row">
+                        <div class="col">
+                            <span>Łączny koszt: @order.TotalPrice zł</span>
+                        </div>
+                    </div>
+                    <div class="row order-items-row">
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                @foreach (var orderItem in order.OrderItems)
+                                {
+                                    <li>
+                                        <div class="order-item-info d-flex">
+                                            <div class="overlay-photo">
+                                                <div class="color-overlay"></div>
+                                                <img src="@Url.ProductIconPath(orderItem.Product.ProductImageFileName)" />
+                                            </div>
+
+                                            <div class="d-flex flex-column justify-content-center pl-2">
+                                                <span>@orderItem.Product.ProductName</span>
+                                                <span>Sztuk: @orderItem.Quantity</span>
+                                                <span>Łącznie: @(orderItem.Quantity * orderItem.UnitPrice) zł</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            }
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(".orderstateddl").on('change', function (e) {
+        //e.preventDefault();
+
+        var f = $(this.form);
+        var section = f.closest("section");
+
+        var action = f.attr("action");
+        var serializedForm = f.serialize();
+        $.post(action, serializedForm).done(function (data) {
+            if (data == '@Disabled.Models.OrderState.New.ToString()') {
+                section.removeClass();
+                section.addClass("orderNew");
+            }
+            else if (data == '@Disabled.Models.OrderState.Processed.ToString()') {
+                section.removeClass();
+                section.addClass("orderProcessed");
+            }
+            else if (data == '@Disabled.Models.OrderState.Shipped.ToString()') {
+                section.removeClass();
+                section.addClass("orderShipped");
+            }
+        });
+    });
+</script>

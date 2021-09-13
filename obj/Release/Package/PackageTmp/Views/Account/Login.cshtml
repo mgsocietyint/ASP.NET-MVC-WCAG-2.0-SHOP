@@ -1,0 +1,85 @@
+﻿@model Disabled.ViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Disabled. | Logowanie";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+
+<div class="breadcrumb-background">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs">@Html.MvcSiteMap().SiteMapPath()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="container login-form d-flex align-items-start justify-content-center-sm justify-content-start-lg pt-4">
+
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col">
+                    <h1>Logowanie</h1>
+                </div>
+            </div>
+            <div class="row login-error-row">
+                <div class="col" id="login-error">
+                    @*@Html.ValidationMessage("loginerror", "")*@
+                    @Html.ValidationSummary()
+                </div>
+            </div>
+            <div class="row email-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.Email, "E-mail:")
+                </div>
+            </div>
+            <div class="row email-validation-row">
+                <div class="col">
+                    @Html.TextBoxFor(o => o.Email)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.Email)
+                    </div>
+                </div>
+            </div>
+            <div class="row password-row">
+                <div class="col">
+                    @Html.LabelFor(o => o.Password, "Hasło:")
+                </div>
+            </div>
+            <div class="row password-validation-row">
+                <div class="col">
+                    @Html.PasswordFor(o => o.Password)
+                    <div class="login-validation-message">
+                        @Html.ValidationMessageFor(o => o.Password)
+                    </div>
+                </div>
+            </div>
+            <div class="row remember-row">
+                <div class="col">
+                    @Html.CheckBoxFor(m => m.RememberMe, new { @checked = "checked", @class = "checkbox" })
+                    @Html.LabelFor(m => m.RememberMe)
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col">
+                    <input type="submit" value="Zaloguj" class="submit-link" />
+                </div>
+            </div>
+            <div class="row register-redirect-row">
+                <div class="col">
+                    <a href="@Url.Action("Register", "Account")" class="redirect-link d-flex align-items-center justify-content-center">Rejestracja</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
